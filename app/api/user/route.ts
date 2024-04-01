@@ -27,7 +27,7 @@ export async function POST(req: Request) {
   }
 }
 
-export async function GET() {
+export async function GET(req: Request) {
   const userSessionId = cookies().get("user_session_id")?.value as string;
   if (userSessionId) {
     const username = JSON.parse(userSessionId);

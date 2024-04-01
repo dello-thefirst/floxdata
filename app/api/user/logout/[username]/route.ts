@@ -1,6 +1,9 @@
 import { cookies } from "next/headers";
 
-export async function GET({ params }: { params: { username: string } }) {
+export async function GET(
+  req: Request,
+  { params }: { params: { username: string } }
+) {
   const userSessionId = cookies().get("user_session_id");
   if (userSessionId && JSON.parse(userSessionId.value) == params.username) {
     cookies().delete("user_session_id");
