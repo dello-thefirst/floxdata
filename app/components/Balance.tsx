@@ -1,42 +1,64 @@
 "use client";
-import React from "react";
+import axios from "axios";
+import React, { useEffect } from "react";
 import { useState } from "react";
 
 function Balance() {
-  const [mainBalance, setMainBalance] = useState(130.4);
+  const [mainBalance, setMainBalance] = useState(0);
+  const [referralBalance, setReferralBalance] = useState(0);
+  //...
   const [isMainBalanceToggled, setIsMainBalanceToggled] = useState(true);
-
-  const [referralBalance, setReferralBalance] = useState(45.94);
   const [isReferralBalanceToggled, setIsReferralBalanceToggled] =
     useState(true);
+  //...
+  const [isBalanceLoading, setIsBalanceLoading] = useState(true);
 
-  const toggleMainBalance = () => {
-    if (isMainBalanceToggled) setIsMainBalanceToggled(false);
-    else setIsMainBalanceToggled(true);
+  const toggleBalance = (balanceState: string) => {
+    if (balanceState == "isMainBalanceToggled") {
+      if (isMainBalanceToggled) setIsMainBalanceToggled(false);
+      else setIsMainBalanceToggled(true);
+    } else {
+      if (isReferralBalanceToggled) setIsReferralBalanceToggled(false);
+      else setIsReferralBalanceToggled(true);
+    }
   };
 
-  const toggleReferralBalance = () => {
-    if (isReferralBalanceToggled) setIsReferralBalanceToggled(false);
-    else setIsReferralBalanceToggled(true);
-  };
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await axios.get("/api/user");
+        setMainBalance(res.data.account_balance[0].main_balance);
+        setReferralBalance(res.data.account_balance[0].referral_balance);
+        setIsBalanceLoading(false);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchData();
+  }, []);
   return (
     <div className="sec-1 w-full flex gap-5">
       <div className="w-[260px] h-[140px] rounded-xl p-5 shadow-2xl relative bg-gradient-to-tl from-[deeppink] to-[#321653]">
         <i
-          onClick={toggleMainBalance}
+          onClick={() => toggleBalance("isMainBalanceToggled")}
           className={`fa-light ${
             isMainBalanceToggled ? "fa-eye" : "fa-eye-slash"
           } absolute right-3 top-3 cursor-pointer`}
         ></i>
         <p className="text-[12px] font-normal text-gray-300">Balance:</p>
         <p className="text-[25px] mt-1 text-white">
-          &#8358; {isMainBalanceToggled ? mainBalance : "* * * *"}
+          &#8358;{" "}
+          {!isBalanceLoading
+            ? isMainBalanceToggled
+              ? mainBalance
+              : "* * * *"
+            : "Loading"}
         </p>
       </div>
 
       <div className="w-[260px] h-[140px] rounded-xl p-5 shadow-2xl  bg-gradient-to-tr from-[#2f0080] to-[rebeccapurple] relative">
         <i
-          onClick={toggleReferralBalance}
+          onClick={() => toggleBalance("isReferralBalanceToggled")}
           className={`fa-light ${
             isReferralBalanceToggled ? "fa-eye" : "fa-eye-slash"
           } absolute right-3 top-3 cursor-pointer`}
@@ -49,7 +71,7 @@ function Balance() {
 
       <div className="w-[260px] h-[140px] rounded-xl p-5 shadow-2xl  bg-[var(--bg-secondary)] relative">
         <p className="text-[12px] font-normal text-gray-300">Coupon:</p>
-        <p className="text-[25px] mt-1 text-white">&#8358; 60.05</p>
+        <p className="text-[25px] mt-1 text-white">&#8358; 0</p>
       </div>
     </div>
   );

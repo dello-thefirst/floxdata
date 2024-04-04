@@ -11,6 +11,9 @@ export async function POST(req: Request) {
         email: body.email,
         username: body.username,
         password: body.password,
+        account_balance: {
+          create: {},
+        },
       },
     });
     cookies().set("user_session_id", JSON.stringify(body.username));
@@ -32,9 +35,12 @@ export async function GET(req: Request) {
   if (userSessionId) {
     const username = JSON.parse(userSessionId);
     try {
-      const getUser = await prisma.user.findUnique({
+      const getUser = await prisma.user.findUniqueOrThrow({
         where: {
           username: username,
+        },
+        include: {
+          account_balance: true,
         },
       });
       if (getUser) {

@@ -14,10 +14,19 @@ datasource db {
   directUrl = env("DIRECT_URL")
 }
 
+model Balance {
+  id      Int      @id @default(autoincrement())
+  user User @relation(fields: [userId], references: [id])
+  userId Int @unique
+  main_balance Float @default(0.00)
+  referral_balance Float @default(0.00)
+  coupon_balance Float @default(0.00)
+}
 model User {
   id      Int      @id @default(autoincrement())
   name    String?
   email   String   @unique
   username String @unique
   password String
+  account_balance Balance[]
 }
