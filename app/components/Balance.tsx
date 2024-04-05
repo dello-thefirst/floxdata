@@ -22,9 +22,11 @@ function Balance() {
   };
 
   const { userData, isUserDataLoading } = useUserContext();
+  const userDataObject = !isUserDataLoading ? JSON.parse(userData) : "";
   useEffect(() => {
-    if (userData.account_balance)
-      setMainBalance(userData.account_balance[0]?.main_balance);
+    setMainBalance(
+      !isUserDataLoading && userDataObject.account_balance[0]?.main_balance
+    );
   }, [isUserDataLoading]);
   return (
     <div className="sec-1 w-full flex gap-5 sm:flex-nowrap sm:overflow-x-auto">

@@ -5,6 +5,8 @@ import { useUserContext } from "../UserData";
 
 export default function Header() {
   const { userData, isUserDataLoading } = useUserContext();
+  const userDataObject = !isUserDataLoading ? JSON.parse(userData) : "";
+
   return (
     <header className="w-full h-[55px] flex items-center px-[5%] shadow-lg">
       <div className="welcome-msg flex gap-3">
@@ -17,7 +19,7 @@ export default function Header() {
               <p className="skeleton h-3 rounded-lg"> </p>
             ) : (
               <p className="username-txt text-[14px] text-gray-300">
-                {userData.name}
+                {isUserDataLoading ? "..." : userDataObject.name}
               </p>
             ))}
         </div>
