@@ -30,7 +30,7 @@ function Balance() {
   }, [isUserDataLoading]);
   return (
     <div className="sec-1 w-full flex gap-5 sm:flex-nowrap sm:overflow-x-auto">
-      <div className="w-[240px] h-[130px] rounded-xl p-5 shadow-2xl relative bg-gradient-to-tl from-[deeppink] to-[#2e2a33] flex-none">
+      <div className="w-[240px] h-[130px] rounded-xl p-5 shadow-2xl relative bg-gradient-to-tl from-[deeppink] to-[#040cffd8] flex-none">
         <i
           onClick={() => toggleBalance("isMainBalanceToggled")}
           className={`fa-light ${

@@ -20,7 +20,7 @@ export default function AppUserContext({
     const getDetails = async () => {
       try {
         setIsLoading(true);
-        const res = await axios.get("/api/user");
+        const res = await axios.get("/api/user/details");
         setData(JSON.stringify(res.data));
         console.log(res.data);
       } catch (error) {

@@ -8,7 +8,7 @@ export default function Header() {
   const userDataObject = !isUserDataLoading ? JSON.parse(userData) : "";
 
   return (
-    <header className="w-full h-[55px] flex items-center px-[4%] shadow-lg">
+    <header className="w-full h-[70px] flex items-center px-[4%] shadow-lg sm:px-[5%]">
       <div className="welcome-msg flex gap-3">
         <div>
           <p className="welcome-txt text-[10px] font-normal text-gray-400">
