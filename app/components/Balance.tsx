@@ -33,15 +33,15 @@ function Balance() {
   }, [isUserDataLoading]);
   return (
     <div className="sec-1 w-full flex gap-5">
-      <div className="w-[380px] h-[190px] rounded-xl p-5 shadow-2xl relative bg-gradient-to-l from-[deeppink] to-[#24266dd8] sm:w-full">
-        <i
-          onClick={() => toggleBalance("isMainBalanceToggled")}
-          className={`fa-light ${
-            isMainBalanceToggled ? "fa-eye" : "fa-eye-slash"
-          } absolute right-3 top-3 cursor-pointer`}
-        ></i>
-        <p className="text-[12px] font-normal text-gray-400 uppercase">
-          Total Balance:
+      <div className="w-[380px] h-[140px] rounded-xl p-5 shadow-2xl relative bg-gradient-to-l from-[deeppink] to-[#24266dd8] sm:w-full">
+        <p className="text-[12px] text-gray-400 uppercase">
+          Total Balance: &nbsp;
+          <i
+            onClick={() => toggleBalance("isMainBalanceToggled")}
+            className={`fa-light ${
+              isMainBalanceToggled ? "fa-eye" : "fa-eye-slash"
+            } cursor-pointer`}
+          ></i>
         </p>
         <p className="text-[30px] mt-1 text-white">
           &#8358;{" "}
@@ -51,10 +51,6 @@ function Balance() {
               : "* * * *"
             : ". . ."}
         </p>
-      </div>
-
-      <div className="w-[60px] h-auto rounded-xl shadow-2xl  bg-purple-500 flex items-center justify-center text-[20px]">
-        <i className="fa-sharp fa-solid fa-plus"></i>
       </div>
     </div>
   );
