@@ -11,7 +11,7 @@ export default function Header() {
   const userDataObject = !isUserDataLoading ? JSON.parse(userData) : "";
 
   return (
-    <header className="w-full h-[70px] flex items-center px-[4%] justify-between sm:px-[5%] sm:h-[100px]">
+    <header className="w-full h-[70px] flex items-center px-[4%] justify-between sm:px-[5%] sm:h-[90px]">
       <div className="welcome-msg flex gap-3">
         <Image
           className="w-[40px] h-[40px] rounded-full"

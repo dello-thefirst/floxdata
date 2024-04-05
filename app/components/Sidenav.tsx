@@ -24,7 +24,7 @@ export default function Sidenav() {
           </div>
 
           <nav className="w-full mt-[40px]">
-            <ul className="w-[150px] text-[11px] flex flex-col gap-1 text-gray-300">
+            <ul className="w-[150px] text-[11px] flex flex-col gap-3 text-gray-300">
               <Link href={`/dashboard`}>
                 <li className="flex gap-2 items-center hover:bg-purple-600 hover:bg-opacity-10 hover:text-white rounded-md px-[10px] py-[8px] ">
                   <i className="fa-light fa-house-blank"></i> Dashboard
