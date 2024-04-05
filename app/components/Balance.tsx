@@ -1,7 +1,6 @@
 "use client";
-import axios from "axios";
-import React, { useEffect } from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useUserContext } from "../UserData";
 
 function Balance() {
   const [mainBalance, setMainBalance] = useState(0);
@@ -11,7 +10,6 @@ function Balance() {
   const [isReferralBalanceToggled, setIsReferralBalanceToggled] =
     useState(true);
   //...
-  const [isBalanceLoading, setIsBalanceLoading] = useState(true);
 
   const toggleBalance = (balanceState: string) => {
     if (balanceState == "isMainBalanceToggled") {
@@ -23,22 +21,14 @@ function Balance() {
     }
   };
 
+  const { userData, isUserDataLoading } = useUserContext();
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await axios.get("/api/user");
-        setMainBalance(res.data.account_balance[0].main_balance);
-        setReferralBalance(res.data.account_balance[0].referral_balance);
-        setIsBalanceLoading(false);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    fetchData();
-  }, []);
+    if (userData.account_balance)
+      setMainBalance(userData.account_balance[0]?.main_balance);
+  }, [isUserDataLoading]);
   return (
-    <div className="sec-1 w-full flex gap-5">
-      <div className="w-[260px] h-[140px] rounded-xl p-5 shadow-2xl relative bg-gradient-to-tl from-[deeppink] to-[#321653]">
+    <div className="sec-1 w-full flex gap-5 sm:flex-nowrap sm:overflow-x-auto">
+      <div className="w-[260px] h-[140px] rounded-xl p-5 shadow-2xl relative bg-gradient-to-tl from-[deeppink] to-[#2e2a33] flex-none">
         <i
           onClick={() => toggleBalance("isMainBalanceToggled")}
           className={`fa-light ${
@@ -48,15 +38,15 @@ function Balance() {
         <p className="text-[12px] font-normal text-gray-300">Balance:</p>
         <p className="text-[25px] mt-1 text-white">
           &#8358;{" "}
-          {!isBalanceLoading
+          {!isUserDataLoading
             ? isMainBalanceToggled
               ? mainBalance
               : "* * * *"
-            : "Loading"}
+            : ". . ."}
         </p>
       </div>
 
-      <div className="w-[260px] h-[140px] rounded-xl p-5 shadow-2xl  bg-gradient-to-tr from-[#2f0080] to-[rebeccapurple] relative">
+      <div className="w-[260px] h-[140px] rounded-xl p-5 shadow-2xl  bg-gradient-to-tr from-[#2f0080] to-[rebeccapurple] relative flex-none">
         <i
           onClick={() => toggleBalance("isReferralBalanceToggled")}
           className={`fa-light ${
@@ -69,7 +59,7 @@ function Balance() {
         </p>
       </div>
 
-      <div className="w-[260px] h-[140px] rounded-xl p-5 shadow-2xl  bg-[var(--bg-secondary)] relative">
+      <div className="w-[260px] h-[140px] rounded-xl p-5 shadow-2xl  bg-[var(--bg-secondary)] relative flex-none">
         <p className="text-[12px] font-normal text-gray-300">Coupon:</p>
         <p className="text-[25px] mt-1 text-white">&#8358; 0</p>
       </div>

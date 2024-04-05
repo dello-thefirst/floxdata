@@ -27,6 +27,4 @@ module.exports = {
     },
     extend: {},
   },
-  darkMode: "class",
-  plugins: [require("rippleui")],
 };

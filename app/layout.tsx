@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import AppUserData from "./UserData";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -12,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-theme="dark">
+    <html lang="en">
       <head>
         <link
           rel="stylesheet"
@@ -46,7 +47,9 @@ export default function RootLayout({
           rel="stylesheet"
         ></link>
       </head>
-      <body className="w-screen h-screen">{children}</body>
+      <body className="w-screen h-screen">
+        <AppUserData>{children}</AppUserData>
+      </body>
     </html>
   );
 }

@@ -7,7 +7,7 @@ import profileSnippet from "@/app/assets/images/user_9606048.png";
 export default function Sidenav() {
   return (
     <>
-      <div className="w-auto h-screen py-[15px] bg-[var(--color-3)]">
+      <div className="w-auto h-screen py-[15px] bg-[var(--color-3)] sm:w-full sm:hidden">
         <div className="w-full mx-auto px-[20px]">
           <Logo />
 
