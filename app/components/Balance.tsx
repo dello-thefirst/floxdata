@@ -32,16 +32,18 @@ function Balance() {
     );
   }, [isUserDataLoading]);
   return (
-    <div className="sec-1 w-full flex gap-5 sm:flex-nowrap sm:overflow-x-auto">
-      <div className="w-[240px] h-[130px] rounded-xl p-5 shadow-2xl relative bg-gradient-to-l from-[deeppink] to-[#24266dd8] flex-none">
+    <div className="sec-1 w-full flex gap-5">
+      <div className="w-[380px] h-[190px] rounded-xl p-5 shadow-2xl relative bg-gradient-to-l from-[deeppink] to-[#24266dd8] sm:w-full">
         <i
           onClick={() => toggleBalance("isMainBalanceToggled")}
           className={`fa-light ${
             isMainBalanceToggled ? "fa-eye" : "fa-eye-slash"
           } absolute right-3 top-3 cursor-pointer`}
         ></i>
-        <p className="text-[12px] font-normal text-gray-300">Balance:</p>
-        <p className="text-[25px] mt-1 text-white">
+        <p className="text-[12px] font-normal text-gray-400 uppercase">
+          Total Balance:
+        </p>
+        <p className="text-[30px] mt-1 text-white">
           &#8358;{" "}
           {!isUserDataLoading
             ? isMainBalanceToggled
@@ -51,27 +53,8 @@ function Balance() {
         </p>
       </div>
 
-      <div className="w-[240px] h-[130px] rounded-xl p-5 shadow-2xl  bg-gradient-to-tr from-[#2f0080] to-[rebeccapurple] relative flex-none">
-        <i
-          onClick={() => toggleBalance("isReferralBalanceToggled")}
-          className={`fa-light ${
-            isReferralBalanceToggled ? "fa-eye" : "fa-eye-slash"
-          } absolute right-3 top-3 cursor-pointer`}
-        ></i>
-        <p className="text-[12px] font-normal text-gray-300">Referal Bonus:</p>
-        <p className="text-[25px] mt-1 text-white">
-          &#8358;{" "}
-          {!isUserDataLoading
-            ? isReferralBalanceToggled
-              ? referralBalance
-              : "* * * *"
-            : ". . ."}
-        </p>
-      </div>
-
-      <div className="w-[240px] h-[130px] rounded-xl p-5 shadow-2xl  bg-[var(--bg-secondary)] relative flex-none">
-        <p className="text-[12px] font-normal text-gray-300">Coupon:</p>
-        <p className="text-[25px] mt-1 text-white">&#8358; 0</p>
+      <div className="w-[60px] h-auto rounded-xl shadow-2xl  bg-purple-500 flex items-center justify-center text-[20px]">
+        <i className="fa-sharp fa-solid fa-plus"></i>
       </div>
     </div>
   );
