@@ -27,6 +27,9 @@ function Balance() {
     setMainBalance(
       !isUserDataLoading && userDataObject.account_balance[0]?.main_balance
     );
+    setReferralBalance(
+      !isUserDataLoading && userDataObject.account_balance[0]?.referral_balance
+    );
   }, [isUserDataLoading]);
   return (
     <div className="sec-1 w-full flex gap-5 sm:flex-nowrap sm:overflow-x-auto">
@@ -57,7 +60,12 @@ function Balance() {
         ></i>
         <p className="text-[12px] font-normal text-gray-300">Referal Bonus:</p>
         <p className="text-[25px] mt-1 text-white">
-          &#8358; {isReferralBalanceToggled ? referralBalance : "* * * *"}
+          &#8358;{" "}
+          {!isUserDataLoading
+            ? isReferralBalanceToggled
+              ? referralBalance
+              : "* * * *"
+            : ". . ."}
         </p>
       </div>
 

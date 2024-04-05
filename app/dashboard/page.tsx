@@ -6,8 +6,8 @@ function Home() {
     <div className="wrapper w-full h-full p-10 sm:p-[5%]">
       <Balance />
       <div className="w-full actions my-10">
-        <p className="mb-5">Actions</p>
-        <div className="w-full inner flex gap-6 sm:gap-1 sm:justify-between">
+        <p className="mb-5 hidden">Actions</p>
+        <div className="w-full inner flex gap-8 sm:gap-1 sm:justify-between sm:px-4">
           <div className="action-item flex flex-col gap-2 items-center">
             <div className="w-[60px] h-[60px] rounded-full bg-opacity-10 bg-[var(--bg-secondary)] flex gap-3  justify-center items-center cursor-pointer">
               <i className="fa-regular fa-phone text-purple-500 text-[20px]"></i>
