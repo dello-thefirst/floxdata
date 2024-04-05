@@ -30,7 +30,7 @@ function Balance() {
   }, [isUserDataLoading]);
   return (
     <div className="sec-1 w-full flex gap-5 sm:flex-nowrap sm:overflow-x-auto">
-      <div className="w-[260px] h-[140px] rounded-xl p-5 shadow-2xl relative bg-gradient-to-tl from-[deeppink] to-[#2e2a33] flex-none">
+      <div className="w-[240px] h-[130px] rounded-xl p-5 shadow-2xl relative bg-gradient-to-tl from-[deeppink] to-[#2e2a33] flex-none">
         <i
           onClick={() => toggleBalance("isMainBalanceToggled")}
           className={`fa-light ${
@@ -48,7 +48,7 @@ function Balance() {
         </p>
       </div>
 
-      <div className="w-[260px] h-[140px] rounded-xl p-5 shadow-2xl  bg-gradient-to-tr from-[#2f0080] to-[rebeccapurple] relative flex-none">
+      <div className="w-[240px] h-[130px] rounded-xl p-5 shadow-2xl  bg-gradient-to-tr from-[#2f0080] to-[rebeccapurple] relative flex-none">
         <i
           onClick={() => toggleBalance("isReferralBalanceToggled")}
           className={`fa-light ${
@@ -61,7 +61,7 @@ function Balance() {
         </p>
       </div>
 
-      <div className="w-[260px] h-[140px] rounded-xl p-5 shadow-2xl  bg-[var(--bg-secondary)] relative flex-none">
+      <div className="w-[240px] h-[130px] rounded-xl p-5 shadow-2xl  bg-[var(--bg-secondary)] relative flex-none">
         <p className="text-[12px] font-normal text-gray-300">Coupon:</p>
         <p className="text-[25px] mt-1 text-white">&#8358; 0</p>
       </div>

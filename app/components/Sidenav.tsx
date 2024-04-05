@@ -8,7 +8,7 @@ export default function Sidenav() {
   return (
     <>
       <div className="w-auto h-screen py-[15px] bg-[var(--color-3)] sm:w-full sm:hidden">
-        <div className="w-full mx-auto px-[20px]">
+        <div className="w-full mx-auto px-[10px]">
           <Logo />
 
           <div className="w-full profile-snippet flex items-center flex-col justify-center mt-10 hidden">
@@ -24,13 +24,13 @@ export default function Sidenav() {
           </div>
 
           <nav className="w-full mt-[40px]">
-            <ul className="w-[150px] text-[11px] flex flex-col gap-3 text-gray-300">
-              <Link href={`/`}>
+            <ul className="w-[150px] text-[11px] flex flex-col gap-1 text-gray-300">
+              <Link href={`/dashboard`}>
                 <li className="flex gap-2 items-center hover:bg-purple-600 hover:bg-opacity-10 hover:text-white rounded-md px-[10px] py-[8px] ">
                   <i className="fa-light fa-house-blank"></i> Dashboard
                 </li>
               </Link>
-              <Link href={`/`}>
+              <Link href={`/dashboard/transactions`}>
                 <li className="flex gap-2 items-center bg-opacity-10 rounded-md px-[10px] py-[8px]">
                   <i className="fa-light fa-chart-simple"></i> Transactions
                 </li>
