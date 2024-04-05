@@ -7,7 +7,7 @@ function Home() {
       <Balance />
       <div className="w-full actions my-10">
         <p className="mb-5 hidden">Actions</p>
-        <div className="w-full inner flex gap-8 sm:grid sm:gap-4 sm:grid-cols-2 sm:px-0">
+        <div className="w-full inner flex gap-8 sm:grid sm:gap-4 sm:grid-cols-2 sm:px-1">
           <div className="w-[140px] h-auto rounded-2xl bg-[var(--bg-secondary)] p-5 flex flex-col gap-5 sm:w-full">
             <div className="w-[60px] h-[60px] rounded-full bg-purple-500 bg-opacity-10 flex gap-3 shadow-xl justify-center items-center cursor-pointer">
               <i className="fa-regular fa-phone text-purple-500 text-[20px]"></i>
