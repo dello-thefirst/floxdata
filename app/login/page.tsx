@@ -63,7 +63,9 @@ export default function Page() {
             {isLoading ? "Loading..." : "Login"}
           </button>
           <p className="flex justify-between mt-2 mb-5 text-[12px] font-light">
-            <span className="text text-gray-400">Don't Have an Account?</span>
+            <span className="text text-gray-400">
+              Don&apos;t Have an Account?
+            </span>
 
             <span className="text underline text-blue-400">
               <Link href={"/signup"}>Sign Up</Link>
