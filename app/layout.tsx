@@ -11,9 +11,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
       <head>
@@ -50,15 +50,7 @@ export default function RootLayout({
         ></link>
       </head>
       <body>
-        <AppUserData>
-          <section className="flex w-full h-full">
-            <Sidenav />
-            <section className="w-full h-full">
-              <Header />
-              {children}
-            </section>
-          </section>
-        </AppUserData>
+        <AppUserData>{children}</AppUserData>
       </body>
     </html>
   );
