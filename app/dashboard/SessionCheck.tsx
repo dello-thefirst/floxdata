@@ -9,7 +9,7 @@ export default function SessionCheck({
 }) {
   const userSessionId = cookies().get("user_session_id");
   if (!userSessionId) {
-    redirect("/login");
+    redirect("/auth/login");
   }
   return <div> {children}</div>;
 }

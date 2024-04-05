@@ -1,6 +1,6 @@
 "use client";
 import axios from "axios";
-import Logo from "../components/Logo";
+import Logo from "../../components/Logo";
 import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
@@ -18,18 +18,19 @@ export default function Page() {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
 
-  function loginUser(event: React.FormEvent<HTMLFormElement>) {
+  function createUser(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setIsLoading(true);
     const formData = new FormData(event.target as HTMLFormElement);
     async function fetch() {
       try {
-        const res = await axios.post(`/api/user/login`, {
-          username: formData.get("uid"),
+        const res = await axios.post(`/api/user/signup`, {
+          name: formData.get("name"),
+          email: formData.get("email"),
+          username: formData.get("username"),
           password: formData.get("password"),
         });
         if (res.status < 300) {
-          revalidatePath("/dashboard");
           router.push("/dashboard");
         }
       } catch (error) {
@@ -45,12 +46,24 @@ export default function Page() {
       <div className="w-[320px] h-auto bg-[var(--bg-secondary)] rounded-lg shadow-xl p-10 sm:w-[90%]">
         <Logo />
 
-        <form onSubmit={loginUser} className="mt-10">
+        <form onSubmit={createUser} className="mt-10">
           <input
             className={styles.input}
             type="text"
-            placeholder="Email or Username"
-            name="uid"
+            placeholder="Full Name"
+            name="name"
+          />
+          <input
+            className={styles.input}
+            type="email"
+            placeholder="Email"
+            name="email"
+          />
+          <input
+            className={styles.input}
+            type="text"
+            placeholder="Username"
+            name="username"
           />
 
           <input
@@ -59,16 +72,27 @@ export default function Page() {
             placeholder="Password"
             name="password"
           />
-          <button className={styles.button} type="submit">
-            {isLoading ? "Loading..." : "Login"}
+          <button
+            className={
+              isLoading ? styles.button + " cursor-not-allowed" : styles.button
+            }
+            disabled={isLoading ? true : false}
+            type="submit"
+          >
+            {isLoading ? (
+              <>
+                <i className="fa-solid fa-spinner fa-spin"></i>
+                <span>&nbsp; Signing Up</span>
+              </>
+            ) : (
+              "Sign Up"
+            )}
           </button>
           <p className="flex justify-between mt-2 mb-5 text-[12px] font-light">
-            <span className="text text-gray-400">
-              Don&apos;t Have an Account?
-            </span>
+            <span className="text text-gray-400">Already Have an Account?</span>
 
             <span className="text underline text-blue-400">
-              <Link href={"/signup"}>Sign Up</Link>
+              <Link href={"/auth/login"}>Login</Link>
             </span>
           </p>
         </form>
