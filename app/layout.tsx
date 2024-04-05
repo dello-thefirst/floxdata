@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import AppUserData from "./UserData";
 import "./globals.css";
+import Sidenav from "./components/Sidenav";
+import Header from "./components/Header";
 
 export const metadata: Metadata = {
   title: "Flox Data",
@@ -47,8 +49,16 @@ export default function RootLayout({
           rel="stylesheet"
         ></link>
       </head>
-      <body className="w-screen h-screen">
-        <AppUserData>{children}</AppUserData>
+      <body>
+        <AppUserData>
+          <section className="flex w-full h-full">
+            <Sidenav />
+            <section className="w-full h-full">
+              <Header />
+              {children}
+            </section>
+          </section>
+        </AppUserData>
       </body>
     </html>
   );
