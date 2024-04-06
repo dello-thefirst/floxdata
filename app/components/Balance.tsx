@@ -33,24 +33,30 @@ function Balance() {
   }, [isUserDataLoading]);
   return (
     <div className="sec-1 w-full">
-      <div className="w-[380px] h-[140px] rounded-xl p-5 shadow-2xl relative bg-gradient-to-l from-[deeppink] to-[#24266dd8] sm:w-full">
-        <p className="text-[12px] text-gray-400 uppercase">
-          Total Balance: &nbsp;
-          <i
-            onClick={() => toggleBalance("isMainBalanceToggled")}
-            className={`fa-light ${
-              isMainBalanceToggled ? "fa-eye" : "fa-eye-slash"
-            } cursor-pointer`}
-          ></i>
-        </p>
-        <p className="text-[30px] mt-1 text-white">
-          &#8358;{" "}
-          {!isUserDataLoading
-            ? isMainBalanceToggled
-              ? mainBalance
-              : "* * * *"
-            : ". . ."}
-        </p>
+      <div className="w-[380px] h-[140px] rounded-xl p-5 flex justify-between items-center shadow-2xl relative bg-gradient-to-l from-[#ef14ff] to-[#24266dd8] sm:w-full">
+        <div>
+          <p className="text-[11px] text-gray-300 uppercase font-bold">
+            Total Balance: &nbsp;
+            <i
+              onClick={() => toggleBalance("isMainBalanceToggled")}
+              className={`fa-light ${
+                isMainBalanceToggled ? "fa-eye" : "fa-eye-slash"
+              } cursor-pointer`}
+            ></i>
+          </p>
+          <p className="text-[30px] mt-1 text-white">
+            &#8358;{" "}
+            {!isUserDataLoading
+              ? isMainBalanceToggled
+                ? mainBalance
+                : "* * * *"
+              : ". . ."}
+          </p>
+        </div>
+
+        <div className="w-[50px] h-[50px] rounded-full bg-gray-100 flex justify-center items-center text-gray-700 shadow-xl text-[20px] font-bold">
+          <i className="fa-solid fa-sharp fa-plus"></i>
+        </div>
       </div>
     </div>
   );
