@@ -1,8 +1,27 @@
+"use server";
 import axios from "axios";
+import { redirect } from "next/navigation";
 
-export async function userDetails() {
-  const res = await axios.get(`/api/user`);
-  return res.data;
+export async function loginUser(event: React.FormEvent<HTMLFormElement>) {
+  let isLoginLoading = true;
+  event.preventDefault();
+  isLoginLoading = true;
+  const formData = new FormData(event.target as HTMLFormElement);
+  async function fetch() {
+    try {
+      const res = await axios.post(`/api/user/login`, {
+        username: formData.get("uid"),
+        password: formData.get("password"),
+      });
+      redirect("/dashboard");
+    } catch (error) {
+      console.log(error);
+    } finally {
+      isLoginLoading = false;
+    }
+  }
+  fetch();
+  return { isLoginLoading };
 }
 
 function generateJWT() {
