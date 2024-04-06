@@ -36,14 +36,14 @@ export default function Header() {
           {isUserDataLoading ? (
             <p className="w-[90px] bg-gray-600 h-2 mt-1 rounded-lg"></p>
           ) : (
-            <p className="username-txt text-[14px] text-gray-300">
+            <p className="username-txt text-[var(--color-1)]">
               {isUserDataLoading ? "..." : userDataObject.name}
             </p>
           )}
         </div>
       </div>
 
-      <div className="notification-cont w-[30px] h-[30px] rounded-full bg-[var(--bg-secondary)] flex items-center justify-center text-gray-200">
+      <div className="notification-cont w-[30px] h-[30px] rounded-full bg-[var(--bg-secondary)] flex items-center justify-center text-[var(--color-1)]">
         <i className="fa-solid fa-bell"></i>
       </div>
     </header>
