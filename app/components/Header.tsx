@@ -36,7 +36,7 @@ export default function Header() {
           {isUserDataLoading ? (
             <p className="w-[90px] bg-gray-600 h-2 mt-1 rounded-lg"></p>
           ) : (
-            <p className="username-txt text-[var(--color-1)]">
+            <p className="username-txt text-[var(--color-2)]">
               {isUserDataLoading ? "..." : userDataObject.name}
             </p>
           )}

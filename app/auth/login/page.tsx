@@ -3,7 +3,7 @@ import axios from "axios";
 import Logo from "../../components/Logo";
 import Link from "next/link";
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { redirect, useRouter } from "next/navigation";
 
 const styles = {
   input:
@@ -18,6 +18,7 @@ export default function Page() {
   const [isLoading, setIsLoading] = useState(false);
 
   function loginUser(event: React.FormEvent<HTMLFormElement>) {
+    "use server";
     event.preventDefault();
     setIsLoading(true);
     const formData = new FormData(event.target as HTMLFormElement);
@@ -27,7 +28,7 @@ export default function Page() {
           username: formData.get("uid"),
           password: formData.get("password"),
         });
-          router.push("/dashboard");
+        redirect("/dashboard");
       } catch (error) {
         console.log(error);
       } finally {

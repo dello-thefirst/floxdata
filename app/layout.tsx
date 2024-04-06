@@ -47,7 +47,7 @@ export default function RootLayout({
           rel="stylesheet"
         ></link>
       </head>
-      <body className="light">
+      <body className="dark">
         <AppUserData>{children}</AppUserData>
       </body>
     </html>

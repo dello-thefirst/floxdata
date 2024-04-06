@@ -7,7 +7,7 @@ import profileSnippet from "@/app/assets/images/user_9606048.png";
 export default function Sidenav() {
   return (
     <>
-      <div className="w-auto h-screen py-[15px] bg-[var(--bg-secondary)] sm:w-full sm:hidden">
+      <div className="w-auto h-screen py-[15px] bg-[var(--color-3)] sm:w-full sm:hidden">
         <div className="w-full mx-auto px-[10px]">
           <Logo />
 
@@ -24,7 +24,7 @@ export default function Sidenav() {
           </div>
 
           <nav className="w-full mt-[40px]">
-            <ul className="w-[150px] text-[11px] flex flex-col gap-3 text-[var(--color-2)]">
+            <ul className="w-[150px] text-[11px] flex flex-col gap-3 text-gray-300">
               <Link href={`/dashboard`}>
                 <li className="flex gap-2 items-center hover:bg-purple-600 hover:bg-opacity-10 hover:text-white rounded-md px-[10px] py-[8px] ">
                   <i className="fa-light fa-house-blank"></i> Dashboard
