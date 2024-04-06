@@ -35,16 +35,16 @@ function Balance() {
     <div className="sec-1 w-full">
       <div className="w-[380px] h-[140px] rounded-xl p-5 flex justify-between items-center shadow-2xl relative bg-gradient-to-l from-[#ef14ff] to-[#24266dd8] sm:w-full">
         <div>
-          <p className="text-[11px] text-gray-300 uppercase font-bold">
+          <p className="text-[11px] text-gray-400 uppercase font-bold">
             Total Balance: &nbsp;
             <i
               onClick={() => toggleBalance("isMainBalanceToggled")}
-              className={`fa-light ${
+              className={`fa-regular ${
                 isMainBalanceToggled ? "fa-eye" : "fa-eye-slash"
-              } cursor-pointer`}
+              } cursor-pointer font-bold`}
             ></i>
           </p>
-          <p className="text-[30px] mt-1 text-white">
+          <p className="text-[30px] mt-1 text-white font-2">
             &#8358;{" "}
             {!isUserDataLoading
               ? isMainBalanceToggled
@@ -54,7 +54,7 @@ function Balance() {
           </p>
         </div>
 
-        <div className="w-[50px] h-[50px] rounded-full bg-gray-100 flex justify-center items-center text-gray-700 shadow-xl text-[20px] font-bold">
+        <div className="w-[50px] h-[50px] rounded-full bg-gray-600 flex justify-center items-center text-gray-200 shadow-xl text-[20px] font-bold">
           <i className="fa-solid fa-sharp fa-plus"></i>
         </div>
       </div>

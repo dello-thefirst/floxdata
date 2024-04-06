@@ -13,7 +13,9 @@ function Home() {
               <i className="fa-regular fa-phone text-purple-500 text-[20px]"></i>
             </div>
             <p className="text-[14px] text-gray-300">Buy Airtime</p>
-            <p className="text-gray-500 text-[11px]">Save up to 10%</p>
+            <p className="text-gray-500 text-[11px] font-normal">
+              Save up to 10%
+            </p>
           </div>
 
           <div className="w-[140px] h-auto rounded-xl bg-[var(--bg-secondary)] p-5 flex flex-col gap-5 sm:w-full">
@@ -21,7 +23,9 @@ function Home() {
               <i className="fa-regular fa-wifi text-pink-500 text-[20px]"></i>
             </div>
             <p className="text-[14px] text-gray-300">Buy Data</p>
-            <p className="text-gray-500 text-[11px]">Save up to 10%</p>
+            <p className="text-gray-500 text-[11px] font-normal">
+              Save up to 10%
+            </p>
           </div>
 
           <div className="w-[140px] h-auto rounded-xl bg-[var(--bg-secondary)] p-5 flex flex-col gap-5 sm:w-full">
@@ -29,7 +33,9 @@ function Home() {
               <i className="fa-regular fa-lightbulb-on text-blue-500 text-[20px]"></i>
             </div>
             <p className="text-[14px] text-gray-300">Pay Bills</p>
-            <p className="text-gray-500 text-[11px]">Save up to 10%</p>
+            <p className="text-gray-500 text-[11px] font-normal">
+              Save up to 10%
+            </p>
           </div>
 
           <div className="w-[140px] h-auto rounded-xl bg-[var(--bg-secondary)] p-5 flex flex-col gap-5 sm:w-full">
@@ -37,7 +43,9 @@ function Home() {
               <i className="fa-regular fa-money-bill-transfer text-orange-500 text-[20px]"></i>
             </div>
             <p className="text-[14px] text-gray-300">Convert Airtime</p>
-            <p className="text-gray-500 text-[11px]">Airtime to Cash</p>
+            <p className="text-gray-500 text-[11px] font-normal">
+              Airtime to Cash
+            </p>
           </div>
         </div>
       </div>

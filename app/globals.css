@@ -8,10 +8,16 @@
   --color-1: #ffffff;
   --color-2: #000000;
   --color-3: #0f0b12;
+  --font-1: "Poppins", sans-serif;
+  --font-2: "Raleway", sans-serif;
+}
+
+.font-2 {
+  font-family: var(--font-2);
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-1);
   color: var(--color-1);
   background-color: var(--bg-primary);
   height: 100vh;
