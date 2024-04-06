@@ -35,7 +35,7 @@ function Balance() {
     <div className="sec-1 w-full">
       <div className="w-[380px] h-[140px] rounded-xl p-5 flex justify-between items-center shadow-2xl relative bg-gradient-to-l from-[#ef14ff] to-[#24266dd8] sm:w-full">
         <div>
-          <p className="text-[11px] text-gray-400 uppercase font-bold">
+          <p className="text-[11px] text-gray-400 font-bold">
             Total Balance: &nbsp;
             <i
               onClick={() => toggleBalance("isMainBalanceToggled")}
