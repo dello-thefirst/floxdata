@@ -21,9 +21,9 @@ function Balance() {
   }, [isUserDataLoading]);
   return (
     <div className="sec-1 w-full">
-      <div className="w-[380px] h-[140px] rounded-2xl p-5 flex justify-between items-center shadow-2xl relative bg-gradient-to-r from-[var(--color-3)] to-[#24266dd8] sm:w-full">
+      <div className="w-[380px] h-[180px] rounded-[1.5rem] p-5 flex flex-col justify-between shadow-xl relative bg-gradient-to-r from-[#ecd187] to-[#f1cc68] sm:w-full">
         <div>
-          <p className="text-[11px] text-gray-400 font-bold">
+          <p className="text-[11px] text-gray-600 font-bold uppercase tracking-[1px]">
             Total Balance: &nbsp;
             <i
               onClick={() => toggleBalance()}
@@ -32,8 +32,8 @@ function Balance() {
               } cursor-pointer font-bold`}
             ></i>
           </p>
-          <p className="text-[30px] mt-1 text-white font-2">
-            &#8358;{" "}
+          <p className="text-[30px] mt-1 text-black font-2 font-bold">
+            <sup className="text-[20px] font-sans">&#8358;</sup>{" "}
             {!isUserDataLoading
               ? isMainBalanceToggled
                 ? mainBalance
@@ -42,8 +42,8 @@ function Balance() {
           </p>
         </div>
 
-        <div className="w-[50px] h-[50px] rounded-xl bg-gray-300 flex justify-center items-center text-gray-700 shadow-xl text-[20px] font-bold cursor-pointer">
-          <i className="fa-solid fa-sharp fa-plus"></i>
+        <div className="w-full h-[50px] rounded-[1.5rem] bg-gray-200 flex justify-center items-center text-gray-700 shadow-xl text-[20px] font-bold cursor-pointer">
+          <p className="uppercase font-semibold text-[13px]">Deposit</p>
         </div>
       </div>
     </div>

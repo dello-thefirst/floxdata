@@ -1,13 +1,12 @@
 "use client";
 import React from "react";
-import { getTimeOfDay } from "../functions/global";
 import { useUserContext } from "../UserData";
-import maleAvatar from "@/app/assets/icons/avatar_male.jpg";
+import maleAvatar from "@/app/assets/icons/avatar.png";
 import { useRouter } from "next/router";
 import Image from "next/image";
 
 export function AvatarSkeleton() {
-  return <div className="w-[40px] h-[40px] bg-gray-700 rounded-full"></div>;
+  return <div className="w-[40px] h-[40px] bg-gray-600 bg-opacity-10 rounded-full"></div>;
 }
 
 export default function Header() {
@@ -40,9 +39,9 @@ export default function Header() {
 
         <div>
           {isUserDataLoading ? (
-            <p className="w-[90px] bg-gray-600 h-2 mt-1 rounded-lg"></p>
+            <p className="w-[90px] bg-gray-600 h-2 mt-1 rounded-lg opacity-10"></p>
           ) : (
-            <p className="username-txt text-[var(--color-2)] text-[13px]">
+            <p className="username-txt text-[var(--color-2)] text-[13px] capitalize">
               Hi, {isUserDataLoading ? "..." : userDataObject.username}
             </p>
           )}
