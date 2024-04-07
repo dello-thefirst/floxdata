@@ -19,8 +19,10 @@ export default function LoginForm() {
     const formData = new FormData(e.target as HTMLFormElement);
     async function fetch() {
       try {
-        const res = await axios.post(`/api/user/login`, {
-          username: formData.get("uid"),
+        const res = await axios.post(`/api/user/signup`, {
+          name: formData.get("name"),
+          email: formData.get("email"),
+          username: formData.get("username"),
           password: formData.get("password"),
         });
         if (res.status < 300) router.push("/");
@@ -37,8 +39,20 @@ export default function LoginForm() {
       <input
         className={styles.input}
         type="text"
-        placeholder="Email or Username"
-        name="uid"
+        placeholder="Full Name"
+        name="name"
+      />
+      <input
+        className={styles.input}
+        type="email"
+        placeholder="Email"
+        name="email"
+      />
+      <input
+        className={styles.input}
+        type="text"
+        placeholder="Username"
+        name="username"
       />
 
       <input
@@ -57,17 +71,17 @@ export default function LoginForm() {
         {isLoading ? (
           <>
             <i className="fa-solid fa-spinner fa-spin"></i>
-            <span>&nbsp; Logging In</span>
+            <span>&nbsp; Signing Up</span>
           </>
         ) : (
           "Login"
         )}
       </button>
       <p className="flex justify-between mt-2 mb-5 text-[12px] font-light">
-        <span className="text text-gray-400">Don&apos;t Have an Account?</span>
+        <span className="text text-gray-400">Already Have an Account?</span>
 
         <span className="text underline text-blue-400">
-          <Link href={"/auth/signup"}>Sign Up</Link>
+          <Link href={"/auth/login"}>Login</Link>
         </span>
       </p>
     </form>
