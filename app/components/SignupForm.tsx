@@ -25,7 +25,7 @@ export default function LoginForm() {
           username: formData.get("username"),
           password: formData.get("password"),
         });
-        if (res.status < 300) router.push("/");
+        if (res.status === 201) router.push("/dashboard");
       } catch (error) {
         console.log(error);
       } finally {
