@@ -4,7 +4,6 @@ import Logo from "../../components/Logo";
 import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { revalidatePath } from "next/cache";
 
 const styles = {
   input:

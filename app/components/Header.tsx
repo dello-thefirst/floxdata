@@ -3,6 +3,7 @@ import React from "react";
 import { getTimeOfDay } from "../functions/global";
 import { useUserContext } from "../UserData";
 import maleAvatar from "@/app/assets/icons/avatar_male.jpg";
+import { useRouter } from "next/router";
 import Image from "next/image";
 
 export function AvatarSkeleton() {
@@ -13,9 +14,18 @@ export default function Header() {
   const { userData, isUserDataLoading } = useUserContext();
   const userDataObject = !isUserDataLoading ? JSON.parse(userData) : "";
 
+  function toggleTheme() {
+    const theme = localStorage.getItem("theme") as string;
+    if (theme == "dark") {
+      localStorage.setItem("theme", "light");
+    } else {
+      localStorage.setItem("theme", "dark");
+    }
+    console.log(theme);
+  }
   return (
-    <header className="w-full h-[70px] flex items-center shadow-lg px-[4%] justify-between sm:px-[5%] sm:h-[90px]">
-      <div className="welcome-msg flex gap-3">
+    <header className="w-full h-[70px] flex items-center px-[4%] justify-between sm:px-[5%] sm:h-[80px]">
+      <div className="welcome-msg flex gap-3 items-center">
         {!isUserDataLoading ? (
           <Image
             className="w-[40px] h-[40px] rounded-full"
@@ -29,21 +39,21 @@ export default function Header() {
         )}
 
         <div>
-          <p className="welcome-txt text-[10px] font-normal text-gray-400">
-            Good {getTimeOfDay()},
-          </p>
           {isUserDataLoading ? (
             <p className="w-[90px] bg-gray-600 h-2 mt-1 rounded-lg"></p>
           ) : (
             <p className="username-txt text-[var(--color-2)] text-[13px]">
-              {isUserDataLoading ? "..." : userDataObject.name}
+              Hi, {isUserDataLoading ? "..." : userDataObject.username}
             </p>
           )}
         </div>
       </div>
 
-      <div className="notification-cont w-[30px] h-[30px] shadow-lg rounded-full bg-[var(--bg-secondary)] flex items-center justify-center text-[var(--color-1)]">
-        <i className="fa-solid fa-bell"></i>
+      <div
+        onClick={toggleTheme}
+        className="notification-cont w-[30px] h-[30px] shadow-lg rounded-full bg-[var(--bg-secondary)] flex items-center justify-center text-[var(--color-1)]"
+      >
+        <i className="fa-solid fa-moon-stars"></i>
       </div>
     </header>
   );

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import AppUserData from "./UserData";
+import { useAppTheme } from "./Theme";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -47,7 +48,7 @@ export default function RootLayout({
           rel="stylesheet"
         ></link>
       </head>
-      <body className="dark">
+      <body className={`light`}>
         <AppUserData>{children}</AppUserData>
       </body>
     </html>

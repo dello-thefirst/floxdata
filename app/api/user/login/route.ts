@@ -30,8 +30,9 @@ export async function POST(req: Request) {
       });
     }
   } catch (error) {
-    return new Response(JSON.stringify({ message: "An error ocurred" }), {
+    return new Response(JSON.stringify({ message: error }), {
       headers: { "Content-Type": "application/json" },
+      status: 402,
     });
   } finally {
     await prisma.$disconnect();

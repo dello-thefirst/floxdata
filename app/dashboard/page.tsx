@@ -6,44 +6,44 @@ function Home() {
     <div className="wrapper w-full h-full p-10 sm:p-[5%]">
       <Balance />
       <div className="w-full actions my-10">
-        <p className="mb-5 hidden">Actions</p>
-        <div className="w-full inner flex gap-8 sm:grid sm:gap-4 sm:grid-cols-2 sm:px-1">
-          <div className="w-[150px] shadow-SM h-auto rounded-xl bg-[var(--bg-secondary)] p-5 flex flex-col gap-5 sm:w-full">
+        <p className="mb-5 text-gray-400 font-normal">Quick Actions</p>
+        <div className="w-full inner flex gap-8 sm:grid sm:gap-4 sm:grid-cols-4 sm:px-1">
+          <div className="w-[150px] shadow-SM h-auto rounded-xl bg-[var(--bg-secondary)] p-5 flex flex-col gap-5 sm:w-full sm:bg-transparent sm:items-center sm:p-0">
             <div className="w-[60px] h-[60px] sm:w-[50px] sm:h-[50px] rounded-full bg-purple-500 bg-opacity-10 flex gap-3 shadow-xl justify-center items-center cursor-pointer">
               <i className="fa-regular fa-phone text-purple-500 text-[20px]"></i>
             </div>
-            <p className="text-[14px] text-[var(--color-1)]">Buy Airtime</p>
-            <p className="text-gray-500 text-[11px] font-normal">
+            <p className="text-[13px] text-[var(--color-2)] text-center">Buy Airtime</p>
+            <p className="text-gray-500 text-[11px] font-normal sm:hidden">
               Save up to 10%
             </p>
           </div>
 
-          <div className="w-[150px] shadow-SM h-auto rounded-xl bg-[var(--bg-secondary)] p-5 flex flex-col gap-5 sm:w-full">
+          <div className="w-[150px] shadow-SM h-auto rounded-xl bg-[var(--bg-secondary)] p-5 flex flex-col gap-5 sm:w-full sm:bg-transparent sm:items-center sm:p-0">
             <div className="w-[60px] h-[60px] sm:w-[50px] sm:h-[50px] rounded-full bg-pink-500 bg-opacity-10 flex gap-3 shadow-xl justify-center items-center cursor-pointer">
               <i className="fa-regular fa-wifi text-pink-500 text-[20px]"></i>
             </div>
-            <p className="text-[14px] text-[var(--color-1)]">Buy Data</p>
-            <p className="text-gray-500 text-[11px] font-normal">
+            <p className="text-[13px] text-[var(--color-2)] text-center">Buy Data</p>
+            <p className="text-gray-500 text-[11px] font-normal sm:hidden">
               Save up to 10%
             </p>
           </div>
 
-          <div className="w-[150px] shadow-SM h-auto rounded-xl bg-[var(--bg-secondary)] p-5 flex flex-col gap-5 sm:w-full">
+          <div className=" sm:bg-transparent sm:items-centerw-[150px] shadow-SM h-auto rounded-xl bg-[var(--bg-secondary)] p-5 flex flex-col gap-5 sm:w-full sm:p-0">
             <div className="w-[60px] h-[60px] sm:w-[50px] sm:h-[50px] rounded-full bg-blue-500 bg-opacity-10 flex gap-3 shadow-xl justify-center items-center cursor-pointer">
               <i className="fa-regular fa-lightbulb-on text-blue-500 text-[20px]"></i>
             </div>
-            <p className="text-[14px] text-[var(--color-1)]">Pay Bills</p>
-            <p className="text-gray-500 text-[11px] font-normal">
+            <p className="text-[13px] text-[var(--color-2)] text-center">Pay Bills</p>
+            <p className="text-gray-500 text-[11px] font-normal sm:hidden">
               Save up to 10%
             </p>
           </div>
 
-          <div className="w-[150px] shadow-SM h-auto rounded-xl bg-[var(--bg-secondary)] p-5 flex flex-col gap-5 sm:w-full">
+          <div className="w-[150px] shadow-SM h-auto rounded-xl bg-[var(--bg-secondary)] p-5 flex flex-col gap-5 sm:w-full sm:bg-transparent sm:items-center sm:p-0">
             <div className="w-[60px] h-[60px] sm:w-[50px] sm:h-[50px] rounded-full bg-orange-500 bg-opacity-10 flex gap-3 shadow-xl justify-center items-center cursor-pointer">
               <i className="fa-regular fa-money-bill-transfer text-orange-500 text-[20px]"></i>
             </div>
-            <p className="text-[14px] text-[var(--color-1)]">Convert Airtime</p>
-            <p className="text-gray-500 text-[11px] font-normal">
+            <p className="text-[13px] text-[var(--color-2)] text-center">Convert Airtime</p>
+            <p className="text-gray-500 text-[11px] font-normal sm:hidden">
               Airtime to Cash
             </p>
           </div>
