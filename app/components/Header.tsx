@@ -25,11 +25,11 @@ export default function Header() {
     console.log(theme);
   }
   return (
-    <header className="w-full h-[70px] flex items-center px-[4%] justify-between sm:px-[5%] sm:h-[80px]">
+    <header className="w-full h-[70px] flex items-center px-[4%] justify-between sm:px-[5%]">
       <div className="welcome-msg flex gap-3 items-center">
         {!isUserDataLoading ? (
           <Image
-            className="w-[40px] h-[40px] rounded-full"
+            className="w-[35px] h-[35px] rounded-full"
             src={maleAvatar}
             alt=""
             width={40}
