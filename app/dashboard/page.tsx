@@ -5,8 +5,9 @@ function Home() {
   return (
     <div className="wrapper w-full h-full px-[3%]">
       <div className="w-full h-auto mb-5">
-        <div className="w-[140px] h-[35px] bg-white rounded-lg drop-shadow-md flex items-center justify-center text-[12px] sm:w-[100px] sm:h-[25px]">
+        <div className="w-[140px] h-[35px] bg-white rounded-lg drop-shadow-md flex items-center gap-1 cursor-pointer justify-center text-[12px] sm:w-[100px] sm:h-[25px]">
           Dashboard
+          <i className="fa-solid fa-chart-pie"></i>
         </div>
       </div>
       <Balance />
