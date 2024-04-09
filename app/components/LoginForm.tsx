@@ -52,14 +52,20 @@ export default function LoginForm() {
         disabled={isLoading ? true : false}
         type="submit"
       >
-        {isLoading ? (
-          <>
-            <i className="fa-solid fa-circle-notch fa-spin"></i>
-            <span>&nbsp; Logging In...</span>
-          </>
-        ) : (
-          "Login"
-        )}
+        <i
+          className={`fa-solid fa-circle-notch fa-spin ${
+            isLoading ? " " : "opacity-0"
+          }`}
+        ></i>
+        <span>
+          {isLoading ? (
+            <>
+              <span>&nbsp;</span>Logging In...
+            </>
+          ) : (
+            "Login"
+          )}
+        </span>
       </button>
       <p className="flex justify-between mt-2 mb-5 text-[12px] font-light">
         <span className="text text-gray-400">Don&apos;t Have an Account?</span>

@@ -1,8 +1,6 @@
 import Logo from "./Logo";
 import Link from "next/link";
 import "@/app/styles/sidenav.css";
-import Image from "next/image";
-import profileSnippet from "@/app/assets/images/user_9606048.png";
 
 export default function Sidenav() {
   return (
@@ -10,7 +8,7 @@ export default function Sidenav() {
       <div className="w-auto h-screen bg-black sm:w-full sm:hidden">
         <div className="w-full mx-auto">
           <div className="py-5 px-5 text-[17px] border-b border-gray-600">
-            <Logo />
+            <Logo color="light" />
           </div>
 
           <nav className="w-full mt-[40px] px-3">
