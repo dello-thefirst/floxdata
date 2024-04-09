@@ -18,7 +18,7 @@ export async function POST(req: Request) {
       },
     });
     if (loginUser && loginUser[0].password === body.password) {
-      cookies().set("user_session_id", JSON.stringify(body.username));
+      cookies().set("user_session_id", loginUser[0].session_string);
       return new Response(JSON.stringify({ loginUser }), {
         headers: { "Content-Type": "application/json" },
         status: 201,

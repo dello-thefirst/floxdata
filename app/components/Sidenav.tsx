@@ -7,52 +7,43 @@ import profileSnippet from "@/app/assets/images/user_9606048.png";
 export default function Sidenav() {
   return (
     <>
-      <div className="w-auto h-screen py-[15px] bg-[var(--color-3)] sm:w-full sm:hidden">
-        <div className="w-full mx-auto px-[10px]">
-          <Logo />
-
-          <div className="w-full profile-snippet flex items-center flex-col justify-center mt-10 hidden">
-            <Image
-              className="w-[80px] bg-gray-400 rounded-full"
-              src={profileSnippet}
-              alt=""
-            ></Image>
-            <p className="name mt-2 text-gray-200 text-[15px]">Victor Faruna</p>
-            <p className="username text-[11px] text-gray-400 font-light">
-              @dello_
-            </p>
+      <div className="w-auto h-screen bg-black sm:w-full sm:hidden">
+        <div className="w-full mx-auto">
+          <div className="py-5 px-2 text-[15px] border-b border-gray-600">
+            <Logo />
           </div>
 
           <nav className="w-full mt-[40px]">
-            <ul className="w-[150px] text-[11px] flex flex-col gap-3 text-gray-300">
+            <ul className="w-[180px] text-[11px] flex flex-col gap-5 text-gray-300">
               <Link href={`/dashboard`}>
-                <li className="flex gap-2 items-center hover:bg-purple-600 hover:bg-opacity-10 hover:text-white rounded-md px-[10px] py-[8px] ">
-                  <i className="fa-light fa-house-blank"></i> Dashboard
+                <li className="flex gap-5 hover:bg-purple-600 hover:bg-opacity-10 hover:text-white rounded-md px-[10px] py-[8px] ">
+                  <i className="fa-thin text-[18px] fa-house"></i> Dashboard
                 </li>
               </Link>
               <Link href={`/dashboard/transactions`}>
-                <li className="flex gap-2 items-center bg-opacity-10 rounded-md px-[10px] py-[8px]">
-                  <i className="fa-light fa-chart-simple"></i> Transactions
+                <li className="flex gap-5 bg-opacity-10 rounded-md px-[10px] py-[8px]">
+                  <i className="fa-thin text-[18px] fa-paper-plane"></i>{" "}
+                  Transactions
                 </li>
               </Link>
               <Link href={`/`}>
-                <li className="flex gap-2 items-center bg-opacity-10 rounded-md px-[10px] py-[8px]">
-                  <i className="fa-light fa-thin fa-shuffle"></i> Convert
+                <li className="flex gap-5 bg-opacity-10 rounded-md px-[10px] py-[8px]">
+                  <i className="fa-thin text-[18px] fa-shuffle"></i> Convert
                 </li>
               </Link>
               <Link href={`/`}>
-                <li className="flex gap-2 items-center bg-opacity-10 rounded-md px-[10px] py-[8px]">
-                  <i className="fa-light fa-wallet"></i> Wallet
+                <li className="flex gap-5 bg-opacity-10 rounded-md px-[10px] py-[8px]">
+                  <i className="fa-thin text-[18px] fa-wallet"></i> Wallet
                 </li>
               </Link>
               <Link href={`/`}>
-                <li className="flex gap-2 items-center bg-opacity-10 rounded-md px-[10px] py-[8px]">
-                  <i className="fa-light fa-user"></i> Profile
+                <li className="flex gap-5 bg-opacity-10 rounded-md px-[10px] py-[8px]">
+                  <i className="fa-thin text-[18px] fa-user"></i> Profile
                 </li>
               </Link>
               <Link href={``}>
-                <li className="flex gap-2 items-center bg-opacity-10 rounded-md px-[10px] py-[8px]">
-                  <i className="fa-light fa-user"></i> Logout
+                <li className="flex gap-5 bg-opacity-10 rounded-md px-[10px] py-[8px]">
+                  <i className="fa-thin text-[18px] fa-user"></i> Logout
                 </li>
               </Link>
             </ul>

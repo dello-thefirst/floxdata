@@ -1,7 +1,6 @@
 "use client";
 import axios from "axios";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import React, { FormEvent, useState } from "react";
 const styles = {
   input:
@@ -11,7 +10,6 @@ const styles = {
 };
 
 export default function LoginForm() {
-  const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
   function loginUser(e: FormEvent) {
     e.preventDefault();
@@ -23,7 +21,7 @@ export default function LoginForm() {
           username: formData.get("uid"),
           password: formData.get("password"),
         });
-        if (res.status === 201) router.push("/dashboard");
+        if (res.status === 201) window.location.assign("/dashboard");
       } catch (error) {
         console.log(error);
       } finally {
@@ -56,8 +54,8 @@ export default function LoginForm() {
       >
         {isLoading ? (
           <>
-            <i className="fa-solid fa-spinner fa-spin"></i>
-            <span>&nbsp; Logging In</span>
+            <i className="fa-solid fa-circle-notch fa-spin"></i>
+            <span>&nbsp; Logging In...</span>
           </>
         ) : (
           "Login"

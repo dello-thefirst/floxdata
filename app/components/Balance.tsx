@@ -15,9 +15,7 @@ function Balance() {
   const { userData, isUserDataLoading } = useUserContext();
   const userDataObject = !isUserDataLoading ? JSON.parse(userData) : "";
   useEffect(() => {
-    setMainBalance(
-      !isUserDataLoading && userDataObject.account_balance[0]?.main_balance
-    );
+    setMainBalance(!isUserDataLoading && userDataObject.account_balance);
   }, [isUserDataLoading]);
   return (
     <div className="sec-1 w-full">
@@ -32,17 +30,20 @@ function Balance() {
               } cursor-pointer font-bold`}
             ></i>
           </p>
-          <p className="text-[30px] mt-1 text-black font-2 font-bold">
-            <sup className="text-[20px] font-sans">&#8358;</sup>{" "}
+          <p className="text-[30px] mt-1 text-black font-1 font-semibold">
+            &#8358;{" "}
             {!isUserDataLoading
               ? isMainBalanceToggled
-                ? mainBalance
+                ? Intl.NumberFormat("en-US", {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2,
+                  }).format(mainBalance)
                 : "* * * *"
               : ". . ."}
           </p>
         </div>
 
-        <div className="w-full h-[50px] rounded-[1.5rem] bg-gray-200 flex justify-center items-center text-gray-700 shadow-xl text-[20px] font-bold cursor-pointer">
+        <div className="w-full h-[50px] rounded-[1.5rem] bg-white flex justify-center items-center text-gray-700 shadow-xl text-[20px] font-bold cursor-pointer">
           <p className="uppercase font-semibold text-[13px]">Deposit</p>
         </div>
       </div>

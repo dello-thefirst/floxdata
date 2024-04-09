@@ -1,5 +1,6 @@
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient, User } from "@prisma/client";
 import { cookies } from "next/headers";
+import { generateSessionString } from "@/app/functions/user";
 const prisma = new PrismaClient();
 //...
 export async function POST(req: Request) {
@@ -11,12 +12,11 @@ export async function POST(req: Request) {
         email: body.email,
         username: body.username,
         password: body.password,
-        account_balance: {
-          create: {},
-        },
+        account_balance: 0,
+        session_string: generateSessionString(22),
       },
     });
-    cookies().set("user_session_id", JSON.stringify(body.username));
+    cookies().set("user_session_id", addUser.session_string);
     return new Response(JSON.stringify({ addUser }), {
       headers: { "Content-Type": "application/json" },
       status: 201,
@@ -24,6 +24,7 @@ export async function POST(req: Request) {
   } catch (error) {
     return new Response(JSON.stringify({ message: "An error ocurred" }), {
       headers: { "Content-Type": "application/json" },
+      status: 401,
     });
   } finally {
     await prisma.$disconnect();
