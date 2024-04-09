@@ -43,9 +43,9 @@ function Balance() {
           </p>
         </div>
 
-        <div className="w-full h-[50px] rounded-[1.5rem] bg-white flex justify-center items-center text-gray-700 shadow-xl text-[20px] font-bold cursor-pointer">
+        <button className="w-full h-[50px] border-none outline-none rounded-[1.5rem] bg-white flex justify-center items-center text-gray-700 shadow-xl text-[20px] font-bold cursor-pointer">
           <p className="uppercase font-semibold text-[13px]">Deposit</p>
-        </div>
+        </button>
       </div>
     </div>
   );
