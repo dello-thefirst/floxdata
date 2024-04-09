@@ -30,7 +30,7 @@ function Balance() {
               } cursor-pointer font-bold`}
             ></i>
           </p>
-          <p className="text-[30px] mt-1 text-black font-1 font-semibold">
+          <p className="text-[30px] mt-1 text-black font-2 tracking-wide font-medium">
             &#8358;{" "}
             {!isUserDataLoading
               ? isMainBalanceToggled

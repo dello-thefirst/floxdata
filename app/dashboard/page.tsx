@@ -11,7 +11,7 @@ function Home() {
         </div>
       </div>
       <Balance />
-      <div className="w-full actions my-10">
+      <div className="w-full actions my-5">
         <div className="w-full inner flex gap-8 sm:grid sm:gap-4 sm:grid-cols-4 sm:px-1">
           <div className="w-[150px] shadow-SM h-auto rounded-xl bg-[var(--bg-secondary)] p-5 flex flex-col gap-5 sm:w-full sm:bg-transparent sm:items-center sm:p-0 sm:gap-2">
             <div className="w-[60px] h-[60px] sm:w-[50px] sm:h-[50px] rounded-2xl bg-white flex gap-3 shadow-xl justify-center items-center cursor-pointer">

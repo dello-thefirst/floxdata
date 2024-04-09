@@ -1,4 +1,3 @@
-import axios from "axios";
 import Logo from "../../components/Logo";
 import LoginForm from "@/app/components/LoginForm";
 import LoginVector from "@/app/assets/images/login_vector.svg";
@@ -14,7 +13,7 @@ export default function Page() {
             <LoginForm />
           </div>
         </div>
-        <div className="sidepart w-full h-full bg-purple-500 flex items-center justify-center p-10">
+        <div className="sidepart w-full h-full bg-purple-500 flex items-center justify-center p-10 sm:hidden">
           <Image src={LoginVector} alt=""></Image>
         </div>
       </div>
