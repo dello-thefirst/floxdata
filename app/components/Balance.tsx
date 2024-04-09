@@ -21,7 +21,7 @@ function Balance() {
     <div className="sec-1 w-full">
       <div className="w-[380px] h-[150px] rounded-[1rem] shadow-sm p-5 flex flex-col justify-between relative bg-purple-600/20 sm:w-full">
         <div>
-          <p className="text-[11px] text-gray-600 font-bold uppercase tracking-[1px]">
+          <p className="text-[12px] sm:text-[10px] text-gray-600 font-bold tracking-[1px]">
             Total Balance: &nbsp;
             <i
               onClick={() => toggleBalance()}

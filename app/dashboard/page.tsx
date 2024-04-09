@@ -17,7 +17,7 @@ function Home() {
             <div className="w-[60px] h-[60px] sm:w-[50px] sm:h-[50px] rounded-2xl bg-white flex gap-3 shadow-xl justify-center items-center cursor-pointer">
               <i className="fa-regular fa-phone text-purple-500 text-[20px]"></i>
             </div>
-            <p className="text-[13px] text-[var(--color-2)] sm:text-center sm:text-[11px]">
+            <p className="text-[13px] text-[var(--color-2)] sm:text-center sm:text-[10px]">
               Airtime
             </p>
             <p className="text-gray-500 text-[11px] font-normal sm:hidden">
@@ -29,7 +29,7 @@ function Home() {
             <div className="w-[60px] h-[60px] sm:w-[50px] sm:h-[50px] rounded-2xl bg-white flex gap-3 shadow-xl justify-center items-center cursor-pointer">
               <i className="fa-regular fa-wifi text-pink-500 text-[20px]"></i>
             </div>
-            <p className="text-[13px] text-[var(--color-2)] sm:text-center sm:text-[11px]">
+            <p className="text-[13px] text-[var(--color-2)] sm:text-center sm:text-[10px]">
               Data
             </p>
             <p className="text-gray-500 text-[11px] font-normal sm:hidden">
@@ -41,7 +41,7 @@ function Home() {
             <div className="w-[60px] h-[60px] sm:w-[50px] sm:h-[50px] rounded-2xl bg-white flex gap-3 shadow-xl justify-center items-center cursor-pointer">
               <i className="fa-regular fa-lightbulb-on text-blue-500 text-[20px]"></i>
             </div>
-            <p className="text-[13px] text-[var(--color-2)] sm:text-center sm:text-[11px]">
+            <p className="text-[13px] text-[var(--color-2)] sm:text-center sm:text-[10px]">
               Bills
             </p>
             <p className="text-gray-500 text-[11px] font-normal sm:hidden">
@@ -53,7 +53,7 @@ function Home() {
             <div className="w-[60px] h-[60px] sm:w-[50px] sm:h-[50px] rounded-2xl bg-orgray-500 bg-white flex gap-3 shadow-xl justify-center items-center cursor-pointer">
               <i className="fa-regular fa-money-bill-transfer text-orange-500 text-[20px]"></i>
             </div>
-            <p className="text-[13px] text-[var(--color-2)] sm:text-center sm:text-[11px]">
+            <p className="text-[13px] text-[var(--color-2)] sm:text-center sm:text-[10px]">
               Convert
             </p>
             <p className="text-gray-500 text-[11px] font-normal sm:hidden">
