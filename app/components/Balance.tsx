@@ -19,7 +19,7 @@ function Balance() {
   }, [isUserDataLoading]);
   return (
     <div className="sec-1 w-full">
-      <div className="w-[380px] h-[180px] rounded-[1.5rem] p-5 flex flex-col justify-between shadow-xl relative bg-gradient-to-r from-[#ecd187] to-[#f1cc68] sm:w-full">
+      <div className="w-[380px] h-[150px] rounded-[1rem] shadow-xl p-5 flex flex-col justify-between relative bg-gradient-to-r from-[#efd289] to-[#efd289] sm:w-full">
         <div>
           <p className="text-[11px] text-gray-600 font-bold uppercase tracking-[1px]">
             Total Balance: &nbsp;

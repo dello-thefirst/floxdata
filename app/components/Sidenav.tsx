@@ -9,11 +9,11 @@ export default function Sidenav() {
     <>
       <div className="w-auto h-screen bg-black sm:w-full sm:hidden">
         <div className="w-full mx-auto">
-          <div className="py-5 px-2 text-[15px] border-b border-gray-600">
+          <div className="py-5 px-5 text-[15px] border-b border-gray-600">
             <Logo />
           </div>
 
-          <nav className="w-full mt-[40px]">
+          <nav className="w-full mt-[40px] px-3">
             <ul className="w-[180px] text-[11px] flex flex-col gap-5 text-gray-300">
               <Link href={`/dashboard`}>
                 <li className="flex gap-5 hover:bg-purple-600 hover:bg-opacity-10 hover:text-white rounded-md px-[10px] py-[8px] ">
