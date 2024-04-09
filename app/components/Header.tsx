@@ -43,7 +43,7 @@ export default function Header() {
           {isUserDataLoading ? (
             <p className="w-[90px] bg-gray-600 h-2 mt-1 rounded-lg opacity-10"></p>
           ) : (
-            <p className="username-txt text-[var(--color-2)] text-[13px] capitalize font-semibold ">
+            <p className="username-txt text-[var(--color-1)] text-[13px] capitalize font-semibold ">
               Hi, {isUserDataLoading ? "..." : userDataObject.username}
             </p>
           )}
