@@ -14,7 +14,7 @@ function Home() {
       <div className="w-full actions my-5">
         <div className="w-full inner flex gap-8 sm:grid sm:gap-4 sm:grid-cols-4 sm:px-1">
           <div className="w-[150px] shadow-SM h-auto rounded-xl bg-[var(--bg-secondary)] p-5 flex flex-col gap-5 sm:w-full sm:bg-transparent sm:items-center sm:p-0 sm:gap-2">
-            <div className="w-[60px] h-[60px] border sm:border-gray-800/10 sm:w-[50px] sm:h-[50px] rounded-2xl bg-white flex gap-3 shadow-xl justify-center items-center cursor-pointer">
+            <div className="w-[60px] h-[60px] border-[0.5px] sm:border-gray-800/10 sm:w-[50px] sm:h-[50px] rounded-2xl bg-white flex gap-3 shadow-xl justify-center items-center cursor-pointer">
               <i className="fa-regular fa-phone text-purple-500 text-[20px]"></i>
             </div>
             <p className="text-[13px] text-[var(--color-2)] sm:text-center sm:text-[10px]">
@@ -26,7 +26,7 @@ function Home() {
           </div>
 
           <div className="w-[150px] shadow-SM h-auto rounded-xl bg-[var(--bg-secondary)] p-5 flex flex-col gap-5 sm:w-full sm:bg-transparent sm:items-center sm:p-0 sm:gap-2">
-            <div className="w-[60px] h-[60px] border sm:border-gray-800/10 sm:w-[50px] sm:h-[50px] rounded-2xl bg-white flex gap-3 shadow-xl justify-center items-center cursor-pointer">
+            <div className="w-[60px] h-[60px] border-[0.5px] sm:border-gray-800/10 sm:w-[50px] sm:h-[50px] rounded-2xl bg-white flex gap-3 shadow-xl justify-center items-center cursor-pointer">
               <i className="fa-regular fa-wifi text-pink-500 text-[20px]"></i>
             </div>
             <p className="text-[13px] text-[var(--color-2)] sm:text-center sm:text-[10px]">
@@ -38,7 +38,7 @@ function Home() {
           </div>
 
           <div className="w-[150px] h-auto rounded-xl bg-[var(--bg-secondary)] p-5 flex flex-col gap-5 sm:bg-transparent sm:items-center sm:w-full sm:p-0 sm:gap-2">
-            <div className="w-[60px] h-[60px] border sm:border-gray-800/10 sm:w-[50px] sm:h-[50px] rounded-2xl bg-white flex gap-3 shadow-xl justify-center items-center cursor-pointer">
+            <div className="w-[60px] h-[60px] border-[0.5px] sm:border-gray-800/10 sm:w-[50px] sm:h-[50px] rounded-2xl bg-white flex gap-3 shadow-xl justify-center items-center cursor-pointer">
               <i className="fa-regular fa-lightbulb-on text-blue-500 text-[20px]"></i>
             </div>
             <p className="text-[13px] text-[var(--color-2)] sm:text-center sm:text-[10px]">
@@ -50,7 +50,7 @@ function Home() {
           </div>
 
           <div className="w-[150px] h-auto rounded-xl bg-[var(--bg-secondary)] p-5 flex flex-col gap-5 sm:w-full sm:bg-transparent sm:items-center sm:p-0 sm:gap-2">
-            <div className="w-[60px] h-[60px] border  sm:w-[50px] sm:h-[50px] rounded-2xl bg-orgray-500 bg-white flex gap-3 shadow-xl justify-center items-center cursor-pointer">
+            <div className="w-[60px] h-[60px] border-[0.5px]  sm:w-[50px] sm:h-[50px] rounded-2xl bg-orgray-500 bg-white flex gap-3 shadow-xl justify-center items-center cursor-pointer">
               <i className="fa-regular fa-money-bill-transfer text-orange-500 text-[20px]"></i>
             </div>
             <p className="text-[13px] text-[var(--color-2)] sm:text-center sm:text-[10px]">
