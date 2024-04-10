@@ -1,8 +1,7 @@
 "use client";
 import React from "react";
 import { useUserContext } from "../UserData";
-import maleAvatar from "@/app/assets/icons/avatar.png";
-import { useRouter } from "next/router";
+import avatar from "@/app/assets/avatars/dog.png"
 import Image from "next/image";
 
 export function AvatarSkeleton() {
@@ -30,7 +29,7 @@ export default function Header() {
         {!isUserDataLoading ? (
           <Image
             className="w-[35px] h-[35px] rounded-full"
-            src={maleAvatar}
+            src={avatar}
             alt=""
             width={40}
             height={40}

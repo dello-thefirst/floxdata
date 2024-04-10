@@ -45,7 +45,7 @@ export default function Sidenav() {
               </Link>
               <Link href={``}>
                 <li className="flex gap-5 bg-opacity-10 rounded-md px-[10px] py-[8px]">
-                  <i className="fa-thin text-[18px] fa-user"></i>{" "}
+                  <i className="fa-thin text-[18px] fa-right-from-bracket"></i>{" "}
                   <span>Logout</span>
                 </li>
               </Link>
