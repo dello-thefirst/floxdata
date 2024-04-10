@@ -11,6 +11,18 @@ function Home() {
         </div>
       </div>
       <Balance />
+
+      <div className="w-full flex py-5 sm:py-3 text-[12px] sm:text-[10px] gap-2">
+        <button className="quick-action-item w-[130px] h-[35px] shadow-md rounded-lg flex gap-2 items-center justify-center">
+          <span>Buy Data</span>
+          <i className="fa-light fa-paper-plane"></i>
+        </button>
+        <button className="quick-action-item w-[130px] h-[35px] shadow-md rounded-lg flex gap-2 items-center justify-center">
+          <span>Buy Airtime</span>
+          <i className="fa-light fa-phone-flip"></i>
+        </button>
+      </div>
+
       <div className="w-full actions my-5">
         <div className="w-full inner flex gap-8 sm:grid sm:gap-4 sm:grid-cols-4 sm:px-1">
           <div className="w-[150px] shadow-SM h-auto rounded-xl bg-[var(--bg-secondary)] p-5 flex flex-col gap-5 sm:w-full sm:bg-transparent sm:items-center sm:p-0 sm:gap-2">
