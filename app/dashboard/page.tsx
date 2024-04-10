@@ -13,13 +13,13 @@ function Home() {
       <Balance />
 
       <div className="w-full flex py-5 sm:py-3 text-[12px] sm:text-[10px] gap-2">
-        <button className="quick-action-item w-[130px] h-[35px] shadow-md rounded-lg flex gap-2 items-center justify-center">
+        <button className="quick-action-item border-[0.2px] w-[130px] h-[35px] shadow-md rounded-lg flex gap-2 items-center justify-center">
           <span>Buy Data</span>
-          <i className="fa-light fa-paper-plane"></i>
+          <i className="fa-regular fa-paper-plane"></i>
         </button>
-        <button className="quick-action-item w-[130px] h-[35px] shadow-md rounded-lg flex gap-2 items-center justify-center">
+        <button className="quick-action-item border-[0.2px] w-[130px] h-[35px] shadow-md rounded-lg flex gap-2 items-center justify-center">
           <span>Buy Airtime</span>
-          <i className="fa-light fa-phone-flip"></i>
+          <i className="fa-regular fa-phone-flip"></i>
         </button>
       </div>
 
