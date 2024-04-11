@@ -12,22 +12,22 @@ function Home() {
       </div>
       <Balance />
 
-      <div className="w-full flex py-5 sm:py-3 text-[12px] sm:text-[10px] gap-2">
-        <button className="quick-action-item border-[0.2px] w-[130px] h-[35px] shadow-md rounded-lg flex gap-2 items-center justify-center">
+      <div className="w-full flex py-5 text-[12px] sm:text-[10px] gap-2">
+        <button className="quick-action-item sm:border-[0.2px] w-[130px] h-[35px] shadow-md rounded-lg flex gap-2 items-center justify-center">
           <span>Buy Data</span>
           <i className="fa-regular fa-paper-plane"></i>
         </button>
-        <button className="quick-action-item border-[0.2px] w-[130px] h-[35px] shadow-md rounded-lg flex gap-2 items-center justify-center">
+        <button className="quick-action-item sm:border-[0.2px] w-[130px] h-[35px] shadow-md rounded-lg flex gap-2 items-center justify-center">
           <span>Buy Airtime</span>
           <i className="fa-regular fa-phone-flip"></i>
         </button>
       </div>
 
-      <div className="w-full actions my-5">
+      <div className="w-full actions mb-5">
         <div className="w-full inner flex gap-8 sm:grid sm:gap-4 sm:grid-cols-4 sm:px-1">
-          <div className="w-[150px] shadow-SM h-auto rounded-xl bg-[var(--bg-secondary)] p-5 flex flex-col gap-5 sm:w-full sm:bg-transparent sm:items-center sm:p-0 sm:gap-2">
-            <div className="w-[60px] h-[60px] border-[0.5px] sm:border-gray-800/10 sm:w-[50px] sm:h-[50px] rounded-2xl bg-white flex gap-3 shadow-xl justify-center items-center cursor-pointer">
-              <i className="fa-regular fa-phone text-purple-500 text-[20px]"></i>
+          <div className="w-[150px] h-auto rounded-xl bg-[var(--bg-secondary)] p-5 flex flex-col gap-5 sm:w-full sm:bg-transparent sm:items-center sm:p-0 sm:gap-2">
+            <div className="w-[60px] h-[60px] border-[0.5px] border-gray-800/30 sm:w-[50px] sm:h-[50px] rounded-full bg-white flex gap-3 justify-center items-center cursor-pointer">
+              <i className="fa-regular fa-phone text-black text-[20px]"></i>
             </div>
             <p className="text-[13px] text-[var(--color-2)] sm:text-center sm:text-[10px]">
               Airtime
@@ -38,8 +38,8 @@ function Home() {
           </div>
 
           <div className="w-[150px] shadow-SM h-auto rounded-xl bg-[var(--bg-secondary)] p-5 flex flex-col gap-5 sm:w-full sm:bg-transparent sm:items-center sm:p-0 sm:gap-2">
-            <div className="w-[60px] h-[60px] border-[0.5px] sm:border-gray-800/10 sm:w-[50px] sm:h-[50px] rounded-2xl bg-white flex gap-3 shadow-xl justify-center items-center cursor-pointer">
-              <i className="fa-regular fa-wifi text-pink-500 text-[20px]"></i>
+            <div className="w-[60px] h-[60px] border-[0.5px] border-gray-800/30 sm:w-[50px] sm:h-[50px] rounded-full bg-white flex gap-3 justify-center items-center cursor-pointer">
+              <i className="fa-regular fa-sharp fa-wifi text-black text-[20px]"></i>
             </div>
             <p className="text-[13px] text-[var(--color-2)] sm:text-center sm:text-[10px]">
               Data
@@ -50,8 +50,8 @@ function Home() {
           </div>
 
           <div className="w-[150px] h-auto rounded-xl bg-[var(--bg-secondary)] p-5 flex flex-col gap-5 sm:bg-transparent sm:items-center sm:w-full sm:p-0 sm:gap-2">
-            <div className="w-[60px] h-[60px] border-[0.5px] sm:border-gray-800/10 sm:w-[50px] sm:h-[50px] rounded-2xl bg-white flex gap-3 shadow-xl justify-center items-center cursor-pointer">
-              <i className="fa-regular fa-lightbulb-on text-blue-500 text-[20px]"></i>
+            <div className="w-[60px] h-[60px] border-[0.5px] border-gray-800/30 sm:w-[50px] sm:h-[50px] rounded-full bg-white flex gap-3 justify-center items-center cursor-pointer">
+              <i className="fa-regular fa-lightbulb-on text-black text-[20px]"></i>
             </div>
             <p className="text-[13px] text-[var(--color-2)] sm:text-center sm:text-[10px]">
               Bills
@@ -62,8 +62,8 @@ function Home() {
           </div>
 
           <div className="w-[150px] h-auto rounded-xl bg-[var(--bg-secondary)] p-5 flex flex-col gap-5 sm:w-full sm:bg-transparent sm:items-center sm:p-0 sm:gap-2">
-            <div className="w-[60px] h-[60px] border-[0.5px]  sm:w-[50px] sm:h-[50px] rounded-2xl bg-orgray-500 bg-white flex gap-3 shadow-xl justify-center items-center cursor-pointer">
-              <i className="fa-regular fa-money-bill-transfer text-orange-500 text-[20px]"></i>
+            <div className="w-[60px] h-[60px] border-[0.5px] border-gray-800/30  sm:w-[50px] sm:h-[50px] rounded-full bg-orgray-500 bg-white flex gap-3 justify-center items-center cursor-pointer">
+              <i className="fa-regular fa-money-bill-transfer text-black text-[20px]"></i>
             </div>
             <p className="text-[13px] text-[var(--color-2)] sm:text-center sm:text-[10px]">
               Convert
