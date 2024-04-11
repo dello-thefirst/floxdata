@@ -43,7 +43,7 @@ export default function Sidenav() {
                   <span>Profile</span>
                 </li>
               </Link>
-              <Link href={``}>
+              <Link href={`/api/user/logout`}>
                 <li className="flex gap-5 bg-opacity-10 rounded-md px-[10px] py-[8px]">
                   <i className="fa-thin text-[18px] fa-right-from-bracket"></i>{" "}
                   <span>Logout</span>

@@ -5,17 +5,17 @@ export default function Logo({ color }: { color?: string }) {
   return (
     <div className="flex w-full gap-2">
       <Image className="w-[25px] hidden" src={LogoImage} alt=""></Image>
-      <p className="logo  font-light uppercase tracking-wide">
+      <p className="logo  font-normal uppercase tracking-wide">
         <span
           className={
             color === "light"
-              ? "text-gray-500 font-light"
-              : "text-black font-light"
+              ? "text-gray-300 font-normal"
+              : "text-black font-normal"
           }
         >
           flox
         </span>
-        <span className="text-purple-400 font-light">Data</span>
+        <span className="text-purple-600 font-light">Data</span>
       </p>
     </div>
   );
