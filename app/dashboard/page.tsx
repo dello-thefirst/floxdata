@@ -1,5 +1,6 @@
 import React from "react";
 import Balance from "@/app/components/Balance";
+import TransactionHistory from "../components/TransactionHistory";
 
 function Home() {
   return (
@@ -10,17 +11,19 @@ function Home() {
           <i className="fa-solid fa-chart-pie"></i>
         </div>
       </div>
+
       <Balance />
 
-      <div className="w-full flex py-5 text-[12px] sm:text-[10px] gap-2">
-        <button className="quick-action-item sm:border-[0.2px] w-[130px] h-[35px] shadow-md rounded-lg flex gap-2 items-center justify-center">
+      <div className="w-full flex items-center py-5 text-[12px] sm:text-[11px] gap-4 sm:gap-2">
+        <button className="quick-action-item sm:border-[0.2px] w-[130px] h-[35px] shadow-md rounded-none flex gap-2 items-center justify-center">
           <span>Buy Data</span>
           <i className="fa-regular fa-paper-plane"></i>
         </button>
-        <button className="quick-action-item sm:border-[0.2px] w-[130px] h-[35px] shadow-md rounded-lg flex gap-2 items-center justify-center">
+        <button className="quick-action-item sm:border-[0.2px] w-[130px] h-[35px] shadow-md rounded-none flex gap-2 items-center justify-center">
           <span>Buy Airtime</span>
           <i className="fa-regular fa-phone-flip"></i>
         </button>
+        <i className="fa-regular fa-rotate text-[19px] text-black cursor-pointer"></i>
       </div>
 
       <div className="w-full actions mb-5">
@@ -74,6 +77,8 @@ function Home() {
           </div>
         </div>
       </div>
+
+      <TransactionHistory />
     </div>
   );
 }
