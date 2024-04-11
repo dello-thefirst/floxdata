@@ -14,7 +14,7 @@ function Home() {
 
       <Balance />
 
-      <div className="w-full flex items-center py-7 text-[12px] sm:text-[11px] gap-4 sm:gap-2">
+      <div className="w-full flex items-center pt-5 pb-7 text-[12px] sm:text-[11px] gap-4 sm:gap-2">
         <button className="quick-action-item sm:border-[0.2px] w-[130px] h-[35px] shadow-md rounded-none flex gap-2 items-center justify-center">
           <span>Buy Data</span>
           <i className="fa-regular fa-paper-plane"></i>
