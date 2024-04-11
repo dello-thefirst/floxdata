@@ -14,7 +14,7 @@ function Home() {
 
       <Balance />
 
-      <div className="w-full flex items-center py-5 text-[12px] sm:text-[11px] gap-4 sm:gap-2">
+      <div className="w-full flex items-center py-7 text-[12px] sm:text-[11px] gap-4 sm:gap-2">
         <button className="quick-action-item sm:border-[0.2px] w-[130px] h-[35px] shadow-md rounded-none flex gap-2 items-center justify-center">
           <span>Buy Data</span>
           <i className="fa-regular fa-paper-plane"></i>
@@ -26,7 +26,7 @@ function Home() {
         <i className="fa-regular fa-rotate text-[19px] text-black cursor-pointer"></i>
       </div>
 
-      <div className="w-full actions mb-5">
+      <div className="w-full actions mb-7">
         <div className="w-full inner flex gap-8 sm:grid sm:gap-4 sm:grid-cols-4 sm:px-1">
           <div className="w-[150px] h-auto rounded-xl bg-[var(--bg-secondary)] p-5 flex flex-col gap-5 sm:w-full sm:bg-transparent sm:items-center sm:p-0 sm:gap-2">
             <div className="w-[60px] h-[60px] border-[0.5px] border-gray-800/30 sm:w-[50px] sm:h-[50px] rounded-full bg-white flex gap-3 justify-center items-center cursor-pointer">

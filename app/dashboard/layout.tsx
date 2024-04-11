@@ -12,7 +12,7 @@ export default function DashboardLayput({
     <SessionCheck>
       <section className="flex w-full h-full">
         <Sidenav />
-        <section className="w-full h-full">
+        <section className="w-full h-screen overflow-auto">
           <Header />
           {children}
         </section>
