@@ -49,7 +49,7 @@ export default function LoginForm() {
         className={
           isLoading ? styles.button + " cursor-not-allowed" : styles.button
         }
-        disabled={isLoading ? true : false}
+        disabled={isLoading}
         type="submit"
       >
         <i

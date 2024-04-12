@@ -3,7 +3,7 @@ import LogoImage from "@/app/assets/images/Untitled-1.png";
 
 export default function Logo({ color }: { color?: string }) {
   return (
-    <div className="flex w-full gap-2">
+    <div className="flex w-auto gap-2">
       <Image className="w-[25px] hidden" src={LogoImage} alt=""></Image>
       <p className="logo  font-normal uppercase tracking-wide">
         <span

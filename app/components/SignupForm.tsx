@@ -11,7 +11,7 @@ const styles = {
 
 export default function LoginForm() {
   const [isLoading, setIsLoading] = useState(false);
-  function loginUser(e: FormEvent) {
+  function signupUser(e: FormEvent) {
     e.preventDefault();
     setIsLoading(true);
     const formData = new FormData(e.target as HTMLFormElement);
@@ -33,7 +33,7 @@ export default function LoginForm() {
     fetch();
   }
   return (
-    <form onSubmit={loginUser} className="mt-10">
+    <form onSubmit={signupUser} className="mt-10">
       <input
         className={styles.input}
         type="text"
@@ -63,17 +63,23 @@ export default function LoginForm() {
         className={
           isLoading ? styles.button + " cursor-not-allowed" : styles.button
         }
-        disabled={isLoading ? true : false}
+        disabled={isLoading}
         type="submit"
       >
-        {isLoading ? (
-          <>
-            <i className="fa-solid fa-spinner fa-spin"></i>
-            <span>&nbsp; Signing Up</span>
-          </>
-        ) : (
-          "Login"
-        )}
+        <i
+          className={`fa-solid fa-circle-notch fa-spin ${
+            isLoading ? " " : "opacity-0"
+          }`}
+        ></i>
+        <span>
+          {isLoading ? (
+            <>
+              <span>&nbsp;</span>Signing Up...
+            </>
+          ) : (
+            "Signup"
+          )}
+        </span>
       </button>
       <p className="flex justify-between mt-2 mb-5 text-[12px] font-light">
         <span className="text text-gray-400">Already Have an Account?</span>
