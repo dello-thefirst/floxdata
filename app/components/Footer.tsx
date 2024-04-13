@@ -9,7 +9,7 @@ export default function Footer({ className }: { className?: string }) {
     <div
       className={`w-full fixed h-[50px] bg-white border-[0.5px] shad bottom-0 flex justify-center items-center px-7 ${className}`}
     >
-      <ul className="w-full h-full items-center flex justify-between text-[18px]">
+      <ul className="w-full h-full items-center flex justify-between text-[18px] text-gray-600">
         <li>
           <Link href={"/dashboard"}>
             <i
