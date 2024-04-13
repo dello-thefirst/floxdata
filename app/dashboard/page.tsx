@@ -1,6 +1,7 @@
 import React from "react";
 import Balance from "@/app/components/Balance";
 import TransactionHistory from "../components/TransactionHistory";
+import Link from "next/link";
 
 function Home() {
   return (
@@ -15,15 +16,21 @@ function Home() {
       <Balance />
 
       <div className="w-full flex items-center pt-5 pb-7 text-[12px] sm:text-[11px] gap-4 sm:gap-2">
-        <button className="quick-action-item sm:border-[0.2px] w-[130px] h-[35px] shadow-md rounded-none flex gap-2 items-center justify-center">
-          <span>Buy Data</span>
-          <i className="fa-regular fa-paper-plane"></i>
-        </button>
-        <button className="quick-action-item sm:border-[0.2px] w-[130px] h-[35px] shadow-md rounded-none flex gap-2 items-center justify-center">
-          <span>Buy Airtime</span>
-          <i className="fa-regular fa-phone-flip"></i>
-        </button>
-        <i className="fa-regular fa-rotate text-[19px] text-black cursor-pointer"></i>
+        <Link href={`/dashboard/buy`}>
+          <button className="quick-action-item sm:border-[0.2px] w-[130px] h-[35px] shadow-md rounded-none flex gap-2 items-center justify-center">
+            <span>Buy Data</span>
+            <i className="fa-regular fa-paper-plane"></i>
+          </button>
+        </Link>
+        <Link href={`/dashboard/buy`}>
+          <button className="quick-action-item sm:border-[0.2px] w-[130px] h-[35px] shadow-md rounded-none flex gap-2 items-center justify-center">
+            <span>Buy Airtime</span>
+            <i className="fa-regular fa-phone-flip"></i>
+          </button>
+        </Link>
+        <Link href={`/dashboard/convert`}>
+          <i className="fa-regular fa-rotate text-[19px] text-black cursor-pointer"></i>
+        </Link>
       </div>
 
       <div className="w-full actions mb-7">

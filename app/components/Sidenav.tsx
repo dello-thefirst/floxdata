@@ -25,7 +25,7 @@ export default function Sidenav() {
                   <span>Buy Data</span>
                 </li>
               </Link>
-              <Link href={`/`}>
+              <Link href={`/dashboard/convert`}>
                 <li className="flex gap-5 bg-opacity-10 rounded-md px-[10px] py-[8px]">
                   <i className="fa-thin text-[18px] fa-shuffle"></i>{" "}
                   <span>Convert</span>

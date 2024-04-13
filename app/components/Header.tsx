@@ -36,12 +36,12 @@ export default function Header() {
               height={40}
             ></Image>
           ) : (
-            <AvatarSkeleton />
+            <div className="skeleton w-[35px] h-[35px] rounded-full"></div>
           )}
 
           <div>
             {isUserDataLoading ? (
-              <p className="w-[90px] bg-gray-600 h-2 mt-1 rounded-lg opacity-10"></p>
+              <div className="skeleton w-[100px] h-[10px]"></div>
             ) : (
               <p className="username-txt text-[var(--color-1)] text-[13px] capitalize font-semibold ">
                 Hi, {isUserDataLoading ? "..." : userDataObject.username}
@@ -57,7 +57,6 @@ export default function Header() {
           <i className="fa-solid fa-moon-stars"></i>
         </div>
       </header>
-
     </>
   );
 }
