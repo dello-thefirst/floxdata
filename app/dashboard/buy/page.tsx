@@ -88,7 +88,7 @@ export default function Buy() {
             </ul>
           </div>
 
-          <input placeholder="Phone Number" className="w-full bg-transparent border-b border-gray-700 outline-none text-[12px] sm:text-[10px]" type="text" />
+          <input placeholder="Phone Number" className="w-full bg-transparent border-b border-gray-700 outline-none text-[12px] tracking-[1px]" type="text" />
         </div>
     </div>
   );
