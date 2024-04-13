@@ -21,12 +21,20 @@ export default function Footer({ className }: { className?: string }) {
         </li>
         <li>
           <Link href={"/dashboard/buy"}>
-            <i className={`fa-light fa-paper-plane ${page == '/dashboard/buy' && 'text-purple-600'}`}></i>
+            <i
+              className={`fa-light fa-paper-plane ${
+                page == "/dashboard/buy" && "text-purple-600"
+              }`}
+            ></i>
           </Link>
         </li>
         <li>
-          <Link href={"/dashboard"}>
-            <i className="fa-light fa-shuffle"></i>
+          <Link href={"/dashboard/convert"}>
+            <i
+              className={`fa-light fa-shuffle ${
+                page == "/dashboard/convert" && "text-purple-600"
+              }`}
+            ></i>
           </Link>
         </li>
         <li>
