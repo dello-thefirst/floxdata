@@ -4,7 +4,7 @@ import React from "react";
 export default function Footer({ className }: { className?: string }) {
   return (
     <div
-      className={`w-full fixed h-[50px] bg-gray-50 border-[0.1px] shad bottom-0 flex justify-center items-center px-7 ${className}`}
+      className={`w-full fixed h-[50px] bg-white border-[0.2px] shad bottom-0 flex justify-center items-center px-7 ${className}`}
     >
       <ul className="w-full h-full items-center flex justify-between text-[20px]">
         <li>
