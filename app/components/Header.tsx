@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { useUserContext } from "../UserData";
-import avatar from "@/app/assets/avatars/dog.png"
+import avatar from "@/app/assets/avatars/dog.png";
 import Image from "next/image";
 
 export function AvatarSkeleton() {
@@ -24,37 +24,40 @@ export default function Header() {
     console.log(theme);
   }
   return (
-    <header className="w-full h-[70px] flex items-center px-[4%] justify-between sm:px-[5%]">
-      <div className="welcome-msg flex gap-3 items-center">
-        {!isUserDataLoading ? (
-          <Image
-            className="w-[35px] h-[35px] rounded-full"
-            src={avatar}
-            alt=""
-            width={40}
-            height={40}
-          ></Image>
-        ) : (
-          <AvatarSkeleton />
-        )}
-
-        <div>
-          {isUserDataLoading ? (
-            <p className="w-[90px] bg-gray-600 h-2 mt-1 rounded-lg opacity-10"></p>
+    <>
+      <header className="w-full h-[70px] flex items-center px-[4%] justify-between sm:px-[5%]">
+        <div className="welcome-msg flex gap-3 items-center">
+          {!isUserDataLoading ? (
+            <Image
+              className="w-[35px] h-[35px] rounded-full"
+              src={avatar}
+              alt=""
+              width={40}
+              height={40}
+            ></Image>
           ) : (
-            <p className="username-txt text-[var(--color-1)] text-[13px] capitalize font-semibold ">
-              Hi, {isUserDataLoading ? "..." : userDataObject.username}
-            </p>
+            <AvatarSkeleton />
           )}
-        </div>
-      </div>
 
-      <div
-        onClick={toggleTheme}
-        className="notification-cont w-[30px] h-[30px] shadow-lg rounded-full bg-[var(--bg-secondary)] flex items-center justify-center text-[var(--color-1)]"
-      >
-        <i className="fa-solid fa-moon-stars"></i>
-      </div>
-    </header>
+          <div>
+            {isUserDataLoading ? (
+              <p className="w-[90px] bg-gray-600 h-2 mt-1 rounded-lg opacity-10"></p>
+            ) : (
+              <p className="username-txt text-[var(--color-1)] text-[13px] capitalize font-semibold ">
+                Hi, {isUserDataLoading ? "..." : userDataObject.username}
+              </p>
+            )}
+          </div>
+        </div>
+
+        <div
+          onClick={toggleTheme}
+          className="notification-cont w-[30px] h-[30px] shadow-lg rounded-full bg-[var(--bg-secondary)] flex items-center justify-center text-[var(--color-1)]"
+        >
+          <i className="fa-solid fa-moon-stars"></i>
+        </div>
+      </header>
+
+    </>
   );
 }

@@ -16,7 +16,12 @@ export async function POST(req: Request) {
         session_string: generateSessionString(22),
       },
     });
-    cookies().set("user_session_id", addUser.session_string);
+    cookies().set({
+      name: "user_session_id",
+      value: addUser.session_string,
+      maxAge: 60 * 60 * 24 * 30,
+      path: "/",
+    });
     return new Response(JSON.stringify({ addUser }), {
       headers: { "Content-Type": "application/json" },
       status: 201,

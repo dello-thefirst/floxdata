@@ -1,5 +1,5 @@
 "use client";
-import axios from "axios";
+import axios, { AxiosError } from "axios";
 import Link from "next/link";
 import React, { FormEvent, useState } from "react";
 const styles = {
@@ -11,6 +11,7 @@ const styles = {
 
 export default function LoginForm() {
   const [isLoading, setIsLoading] = useState(false);
+  const [errorMsg, setErrorMsg] = useState("");
   function loginUser(e: FormEvent) {
     e.preventDefault();
     setIsLoading(true);
@@ -22,6 +23,7 @@ export default function LoginForm() {
           password: formData.get("password"),
         });
         if (res.status === 201) window.location.assign("/dashboard");
+        if (res.status === 202) setErrorMsg(res.statusText);
       } catch (error) {
         console.log(error);
       } finally {
@@ -35,6 +37,7 @@ export default function LoginForm() {
       <input
         className={styles.input}
         type="text"
+        required
         placeholder="Email or Username"
         name="uid"
       />
@@ -42,9 +45,14 @@ export default function LoginForm() {
       <input
         className={styles.input}
         type="password"
+        required
         placeholder="Password"
         name="password"
       />
+
+      <p className="error-msg text-[11px] my-2 text-red-500">
+        {errorMsg !== "" ? errorMsg : ""}
+      </p>
       <button
         className={
           isLoading ? styles.button + " cursor-not-allowed" : styles.button

@@ -11,6 +11,7 @@ const styles = {
 
 export default function LoginForm() {
   const [isLoading, setIsLoading] = useState(false);
+  const [errorMsg, setErrorMsg] = useState("");
   function signupUser(e: FormEvent) {
     e.preventDefault();
     setIsLoading(true);
@@ -23,7 +24,7 @@ export default function LoginForm() {
           username: formData.get("username"),
           password: formData.get("password"),
         });
-        if (res.status === 201) window.location.assign("/dashboard")
+        if (res.status === 201) window.location.assign("/dashboard");
       } catch (error) {
         console.log(error);
       } finally {
@@ -37,18 +38,21 @@ export default function LoginForm() {
       <input
         className={styles.input}
         type="text"
+        required
         placeholder="Full Name"
         name="name"
       />
       <input
         className={styles.input}
         type="email"
+        required
         placeholder="Email"
         name="email"
       />
       <input
         className={styles.input}
         type="text"
+        required
         placeholder="Username"
         name="username"
       />
@@ -56,9 +60,13 @@ export default function LoginForm() {
       <input
         className={styles.input}
         type="password"
+        required
         placeholder="Password"
         name="password"
       />
+      <p className="error-msg text-[11px] my-2 text-red-500">
+        {errorMsg !== "" ? errorMsg : ""}
+      </p>
       <button
         className={
           isLoading ? styles.button + " cursor-not-allowed" : styles.button
