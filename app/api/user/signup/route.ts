@@ -13,7 +13,7 @@ export async function POST(req: Request) {
         username: body.username,
         password: body.password,
         account_balance: 0,
-        session_string: generateSessionString(22),
+        session_string: generateSessionString(44),
       },
     });
     cookies().set({

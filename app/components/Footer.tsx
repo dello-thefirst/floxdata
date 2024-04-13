@@ -20,7 +20,7 @@ export default function Footer({ className }: { className?: string }) {
           </Link>
         </li>
         <li>
-          <Link href={"/dashboard"}>
+          <Link href={"/dashboard/buy"}>
             <i className={`fa-thin fa-paper-plane ${page == '/dashboard/buy' && 'text-purple-600'}`}></i>
           </Link>
         </li>
