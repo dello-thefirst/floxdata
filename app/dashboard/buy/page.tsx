@@ -96,7 +96,7 @@ export default function Buy() {
           placeholder="Phone Number"
           className="w-full bg-transparent border-b border-gray-700 outline-none text-[12px] tracking-[1px] text-center"
           type="text"
-          value={!isUserDataLoading ? userDataObject.phone_number : ""}
+          defaultValue={!isUserDataLoading ? userDataObject.phone_number : ""}
         />
       </div>
 
