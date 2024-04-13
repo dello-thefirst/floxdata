@@ -7,7 +7,7 @@ import gloLogo from "@/app/assets/logos/glo.png";
 import nineMobileLogo from "@/app/assets/logos/9mobile.png";
 
 export default function Buy() {
-  const [mobileNetwork, setMobileNetwork] = useState("airtel")
+  const [mobileNetwork, setMobileNetwork] = useState("airtel");
   return (
     <div className="wrapper w-full h-full px-[3%]">
       <div className="w-full h-auto mb-5">
@@ -17,12 +17,21 @@ export default function Buy() {
         </div>
       </div>
 
-      <div className="w-full rounded-2xl bg-gray-100 h-auto p-5">
-        <div>
+      <div className="w-full rounded-2xl bg-gray-100 h-auto p-5 flex gap-5 items-center justify-between">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="flex items-center gap-2">
               <Image
-                src={mobileNetwork == "airtel" ? airtelLogo : (mobileNetwork == "mtn" ? mtnLogo : (mobileNetwork == "glo" ? gloLogo : (mobileNetwork == "nineMobile" ?  nineMobileLogo : airtelLogo)))}
+                src={
+                  mobileNetwork == "airtel"
+                    ? airtelLogo
+                    : mobileNetwork == "mtn"
+                    ? mtnLogo
+                    : mobileNetwork == "glo"
+                    ? gloLogo
+                    : mobileNetwork == "nineMobile"
+                    ? nineMobileLogo
+                    : airtelLogo
+                }
                 alt=""
                 className="w-[40px] h-[40px] bg-gray-500 rounded-full"
               ></Image>
@@ -78,8 +87,9 @@ export default function Buy() {
               </li>
             </ul>
           </div>
+
+          <input placeholder="Phone Number" className="w-full bg-transparent border-b border-gray-700 outline-none text-[12px] sm:text-[10px]" type="text" />
         </div>
-      </div>
     </div>
   );
 }
