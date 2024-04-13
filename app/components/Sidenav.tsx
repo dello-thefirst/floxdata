@@ -19,7 +19,7 @@ export default function Sidenav() {
                   <span className="">Dashboard</span>
                 </li>
               </Link>
-              <Link href={`/dashboard/transactions`}>
+              <Link href={`/dashboard/buy`}>
                 <li className="flex gap-5 bg-opacity-10 rounded-md px-[10px] py-[8px]">
                   <i className="fa-thin text-[18px] fa-paper-plane"></i>{" "}
                   <span>Buy Data</span>
