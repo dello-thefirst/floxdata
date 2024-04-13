@@ -24,3 +24,14 @@ model User {
   account_balance Float @default(0.00)
   session_string String @unique
 }
+
+model Plans {
+  id      Int      @id @default(autoincrement())
+  plan_id Int
+  plan_type String
+  network String
+  network_id Int
+  amount Float
+  size Float
+  validity Int
+}

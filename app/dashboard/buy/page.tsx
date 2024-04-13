@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import airtelLogo from "@/app/assets/logos/airtel.png";
 import mtnLogo from "@/app/assets/logos/mtn.png";
 import gloLogo from "@/app/assets/logos/glo.png";
@@ -11,6 +11,13 @@ export default function Buy() {
   const [mobileNetwork, setMobileNetwork] = useState("mtn");
   const { isUserDataLoading, userData } = useUserContext();
   const userDataObject = !isUserDataLoading ? JSON.parse(userData) : "";
+  //...
+  useEffect(() => {
+    async function getPlans(mobileNetwork: string) {
+      try {
+      } catch (error) {}
+    }
+  }, [mobileNetwork]);
   return (
     <div className="wrapper w-full h-full px-[3%]">
       <div className="w-full h-auto mb-5">
@@ -100,7 +107,9 @@ export default function Buy() {
         />
       </div>
 
-      <div className="packages w-full rounded-2xl bg-gray-100 h-auto p-5"></div>
+      <div className="packages w-full rounded-2xl bg-gray-100 h-auto p-5">
+        {}
+      </div>
     </div>
   );
 }
