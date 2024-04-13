@@ -11,6 +11,7 @@ export async function POST(req: Request) {
         name: body.name,
         email: body.email,
         username: body.username,
+        phone_number: body.phone,
         password: body.password,
         account_balance: 0,
         session_string: generateSessionString(44),

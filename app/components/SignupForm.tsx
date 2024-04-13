@@ -22,6 +22,7 @@ export default function LoginForm() {
           name: formData.get("name"),
           email: formData.get("email"),
           username: formData.get("username"),
+          phone: formData.get("phone"),
           password: formData.get("password"),
         });
         if (res.status === 201) window.location.assign("/dashboard");
@@ -55,6 +56,14 @@ export default function LoginForm() {
         required
         placeholder="Username"
         name="username"
+      />
+
+      <input
+        className={styles.input}
+        type="number"
+        required
+        placeholder="Phone Number"
+        name="phone"
       />
 
       <input

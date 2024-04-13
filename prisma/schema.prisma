@@ -19,6 +19,7 @@ model User {
   name    String?
   email   String   @unique
   username String @unique
+  phone_number String @unique
   password String
   account_balance Float @default(0.00)
   session_string String @unique
