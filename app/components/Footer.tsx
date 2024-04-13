@@ -13,7 +13,7 @@ export default function Footer({ className }: { className?: string }) {
         <li>
           <Link href={"/dashboard"}>
             <i
-              className={`fa-thin fa-house-blank ${
+              className={`fa-light fa-house-blank ${
                 page == "/dashboard" && "text-purple-600"
               }`}
             ></i>
@@ -21,22 +21,22 @@ export default function Footer({ className }: { className?: string }) {
         </li>
         <li>
           <Link href={"/dashboard/buy"}>
-            <i className={`fa-thin fa-paper-plane ${page == '/dashboard/buy' && 'text-purple-600'}`}></i>
+            <i className={`fa-light fa-paper-plane ${page == '/dashboard/buy' && 'text-purple-600'}`}></i>
           </Link>
         </li>
         <li>
           <Link href={"/dashboard"}>
-            <i className="fa-thin fa-shuffle"></i>
+            <i className="fa-light fa-shuffle"></i>
           </Link>
         </li>
         <li>
           <Link href={"/dashboard"}>
-            <i className="fa-thin fa-wallet"></i>
+            <i className="fa-light fa-wallet"></i>
           </Link>
         </li>
         <li>
           <Link href={"/dashboard"}>
-            <i className="fa-thin fa-user"></i>
+            <i className="fa-light fa-user"></i>
           </Link>
         </li>
       </ul>
