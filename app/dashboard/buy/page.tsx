@@ -12,10 +12,6 @@ export default function Buy() {
       </div>
 
       <BuyDataInterface></BuyDataInterface>
-
-      <div className="packages w-full rounded-2xl bg-gray-100 h-auto p-5">
-        {}
-      </div>
     </div>
   );
 }
