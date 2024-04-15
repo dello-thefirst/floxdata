@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import AppUserData from "./UserData";
-import { useAppTheme } from "./Theme";
+import NextTopLoader from "nextjs-toploader";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -49,7 +49,20 @@ export default function RootLayout({
         ></link>
       </head>
       <body className={`light`}>
-        <AppUserData>{children}</AppUserData>
+        <AppUserData>
+          <NextTopLoader
+            color="purple"
+            initialPosition={0.08}
+            crawlSpeed={200}
+            height={2}
+            crawl={true}
+            showSpinner={true}
+            easing="ease"
+            speed={200}
+            shadow="0 0 10px #2299DD,0 0 5px #2299DD"
+          />
+          {children}
+        </AppUserData>
       </body>
     </html>
   );
