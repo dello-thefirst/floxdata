@@ -14,7 +14,7 @@ export default function BuyDataInterface() {
   return (
     <div className="w-full rounded-2xl bg-gray-100 h-auto p-5 flex gap-10 items-center justify-between mb-5">
       <div className="dropdown">
-        <div tabIndex={0} role="button" className="flex items-center gap-2">
+        <div tabIndex={0} role="button" className="flex items-center justify-center gap-2">
           <Image
             src={
               mobileNetwork == "airtel"
@@ -28,7 +28,7 @@ export default function BuyDataInterface() {
                 : airtelLogo
             }
             alt=""
-            className="w-[40px] h-[40px] object-cover bg-gray-500 rounded-full"
+            className="w-[30px] h-[30px] object-cover bg-gray-500 rounded-full"
           ></Image>
           <i className="fa-solid fa-caret-down"></i>
         </div>
@@ -86,7 +86,7 @@ export default function BuyDataInterface() {
 
       <input
         placeholder="Phone Number"
-        className="w-full bg-transparent border-b border-gray-500 text-gray-500 outline-none text-[12px] tracking-[1px] text-center"
+        className="w-full bg-transparent border-b border-slate-500 text-slate-500 outline-none text-[12px] tracking-[1px] text-center"
         type="text"
         defaultValue={!isUserDataLoading ? userDataObject.phone_number : ""}
       />
