@@ -6,7 +6,6 @@ import mtnLogo from "@/app/assets/logos/mtn.png";
 import gloLogo from "@/app/assets/logos/glo.png";
 import nineMobileLogo from "@/app/assets/logos/9mobile.png";
 import { useUserContext } from "../UserData";
-import { PrismaClient } from "@prisma/client";
 import axios from "axios";
 
 interface PlanPackage {
@@ -25,8 +24,44 @@ export default function BuyDataInterface() {
   const [planPackage, setPlanPackage] = useState<PlanPackage[]>([]);
   const [isPlanLoading, setIsPlanLoading] = useState(false);
   const { isUserDataLoading, userData } = useUserContext();
-  const userDataObject = !isUserDataLoading ? JSON.parse(userData) : "";
+  const userDataObject = !isUserDataLoading ? JSON.parse(userData) : "nah";
+  const [phoneNumber, setPhoneNumber] = useState("");
   //...
+  const mtnPrefixes = [
+    "0704",
+    "0703",
+    "0706",
+    "0803",
+    "0806",
+    "0810",
+    "0813",
+    "0814",
+    "0816",
+    "0903",
+    "0906",
+    "0913",
+  ];
+
+  const airtelPrefixes = [
+    "0701",
+    "0708",
+    "0802",
+    "0808",
+    "0812",
+    "0902",
+    "0907",
+    "0901",
+    "0912",
+  ];
+
+  //...
+  useEffect(() => {
+    if (mtnPrefixes.includes(phoneNumber)) {
+      setMobileNetwork("mtn");
+    } else if (airtelPrefixes.includes(phoneNumber)) {
+      setMobileNetwork("airtel");
+    }
+  }, [phoneNumber]);
   useEffect(() => {
     async function fetchPlans() {
       setIsPlanLoading(true);
@@ -39,6 +74,7 @@ export default function BuyDataInterface() {
         console.log(error);
       } finally {
         setIsPlanLoading(false);
+        console.log(phoneNumber);
       }
     }
     fetchPlans();
@@ -125,12 +161,13 @@ export default function BuyDataInterface() {
           placeholder="Phone Number"
           className="w-full bg-transparent border-b border-slate-500 text-slate-500 outline-none text-[12px] tracking-[1px] text-center"
           type="text"
-          defaultValue={!isUserDataLoading ? userDataObject.phone_number : ""}
+          onChange={(e) => setPhoneNumber(e.target.value)}
+          defaultValue={!isUserDataLoading ? phoneNumber : "..."}
         />
         <i className="fa-regular fa-flag text-gray-400"></i>
       </div>
 
-      <div className="packages w-full rounded-2xl bg-white shadow-xl h-auto p-5">
+      <div className="packages w-full rounded-2xl bg-white shadow-md h-auto p-5">
         <div className="w-full grid grid-cols-3 gap-5">
           {!isPlanLoading ? (
             planPackage.map((plan) => (
