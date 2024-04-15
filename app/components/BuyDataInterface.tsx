@@ -183,7 +183,7 @@ export default function BuyDataInterface() {
                     {plan.size} {plan.size > 40 ? "mb" : "gb"}
                   </p>
                   <p className="text-[12px] font-light sm:text-[10px]">
-                    &#8358; {plan.amount + 20}
+                    &#8358; {Math.ceil(plan.amount / 10) * 10 + 20}
                   </p>
                 </div>
               </div>
