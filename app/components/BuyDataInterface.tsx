@@ -167,7 +167,7 @@ export default function BuyDataInterface() {
         <i className="fa-regular fa-flag text-gray-400"></i>
       </div>
 
-      <div className="packages w-full rounded-2xl bg-white shadow-md h-auto p-5">
+      <div className="packages w-full rounded-2xl bg-white border-[0.2px] shadow-md h-auto p-5">
         <div className="w-full grid grid-cols-3 gap-5">
           {!isPlanLoading ? (
             planPackage.map((plan) => (
