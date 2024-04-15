@@ -130,19 +130,19 @@ export default function BuyDataInterface() {
         <i className="fa-regular fa-flag text-gray-400"></i>
       </div>
 
-      <div className="packages w-full rounded-2xl bg-white shadow-xl-100 h-auto p-5">
+      <div className="packages w-full rounded-2xl bg-white shadow-xl h-auto p-5">
         <div className="w-full grid grid-cols-3 gap-5">
           {!isPlanLoading ? (
             planPackage.map((plan) => (
               <div
-                className="w-full min-h-[100px] rounded-xl bg-gradient-to-b from-purple-300 to-transparent flex items-center justify-center"
+                className="w-full p-3 min-h-[130px] rounded-xl bg-gradient-to-b from-red-200 to-transparent flex items-center justify-center"
                 key={plan.id}
               >
                 <div className="flex flex-col gap-4 items-center sm:gap-2">
-                  <p className="text-[15px] sm:text-[12px] font-normal text-purple-600">
+                  <p className="text-[15px] sm:text-[12px] font-normal text-red-600">
                     {plan.validity} DAYS
                   </p>
-                  <p className="text-[12px] text-purple-600 sm:text-[10px] font-bold">
+                  <p className="text-[12px] text-red-600 sm:text-[11px] font-bold">
                     {plan.size} {plan.size > 40 ? "mb" : "gb"}
                   </p>
                   <p className="text-[12px] font-light sm:text-[10px]">
