@@ -172,7 +172,7 @@ export default function BuyDataInterface() {
           {!isPlanLoading ? (
             planPackage.map((plan) => (
               <div
-                className="w-full p-3 min-h-[130px] rounded-xl bg-gradient-to-b from-purple-200 to-transparent flex items-center justify-center"
+                className="w-full p-3 min-h-[130px] rounded-xl border-[0.2px] bg-gradient-to-b from-purple-200 to-transparent flex items-center justify-center"
                 key={plan.id}
               >
                 <div className="flex flex-col gap-4 items-center sm:gap-2">
