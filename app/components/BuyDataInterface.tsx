@@ -135,15 +135,15 @@ export default function BuyDataInterface() {
           {!isPlanLoading ? (
             planPackage.map((plan) => (
               <div
-                className="w-full min-h-[100px] rounded-2xl border border-purple-600 flex items-center justify-center"
+                className="w-full min-h-[100px] rounded-xl border border-purple-400 flex items-center justify-center"
                 key={plan.id}
               >
                 <div className="flex flex-col gap-4 items-center sm:gap-2">
-                  <p className="text-[15px]">{plan.validity} DAYS</p>
-                  <p className="text-[12px]">
+                  <p className="text-[15px] sm:text-[12px]">{plan.validity} DAYS</p>
+                  <p className="text-[12px] sm:text-[10px]">
                     {plan.size} {plan.size > 40 ? "mb" : "gb"}
                   </p>
-                  <p className="text-[13px] font-semibold">
+                  <p className="text-[12px] font-semibold sm:text-[10px]">
                     &#8358; {plan.amount + 20}
                   </p>
                 </div>
