@@ -46,7 +46,7 @@ export default function BuyDataInterface() {
   return (
     <>
       <div className="w-full rounded-2xl bg-gray-100 h-auto p-5 flex gap-10 items-center justify-between mb-5">
-        <div className="dropdown">
+        <div className="dropdown dropdown-right">
           <div
             tabIndex={0}
             role="button"
@@ -130,20 +130,22 @@ export default function BuyDataInterface() {
         <i className="fa-regular fa-flag text-gray-400"></i>
       </div>
 
-      <div className="packages w-full rounded-2xl bg-gray-100 h-auto p-5">
+      <div className="packages w-full rounded-2xl bg-white shadow-xl-100 h-auto p-5">
         <div className="w-full grid grid-cols-3 gap-5">
           {!isPlanLoading ? (
             planPackage.map((plan) => (
               <div
-                className="w-full min-h-[100px] rounded-xl border border-purple-400 flex items-center justify-center"
+                className="w-full min-h-[100px] rounded-xl bg-gradient-to-b from-purple-300 to-transparent flex items-center justify-center"
                 key={plan.id}
               >
                 <div className="flex flex-col gap-4 items-center sm:gap-2">
-                  <p className="text-[15px] sm:text-[12px]">{plan.validity} DAYS</p>
-                  <p className="text-[12px] sm:text-[10px]">
+                  <p className="text-[15px] sm:text-[12px] font-normal text-purple-600">
+                    {plan.validity} DAYS
+                  </p>
+                  <p className="text-[12px] text-purple-600 sm:text-[10px] font-bold">
                     {plan.size} {plan.size > 40 ? "mb" : "gb"}
                   </p>
-                  <p className="text-[12px] font-semibold sm:text-[10px]">
+                  <p className="text-[12px] font-light sm:text-[10px]">
                     &#8358; {plan.amount + 20}
                   </p>
                 </div>
